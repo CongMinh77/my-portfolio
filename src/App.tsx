@@ -1,15 +1,14 @@
-import "./App.css";
-import logo from "./logo.svg";
-import { Button } from "@mui/material";
+import './App.css'
+import Routing from './routes/routing'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button variant="text">Hello My portfolio</Button>
+        <Routing />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
