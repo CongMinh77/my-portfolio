@@ -1,23 +1,15 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-// const HomePage = () => {
-//   return <>HomePage</>
-// }
-
-// const AboutPage = () => {
-//   return <>AboutPage</>
-// }
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { About } from "../pages"
 
 const Routing = () => {
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <>HomePage</>
-      // loader: rootLoader,
     },
     {
-      path: 'about',
-      element: <div>About</div>
+      path: "about",
+      Component: About
     }
   ])
   return (

@@ -6,5 +6,9 @@
   "semi": false,
   "newline-before-return": true,
   "no-duplicate-variable": [true, "check-parameters"],
-  "no-var-keyword": true
+  "no-var-keyword": true,
+  "space-before-function-paren": ["error", "never"],
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "always"
 }
