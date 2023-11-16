@@ -1,7 +1,11 @@
 import { Box, Typography } from "@mui/material"
 import React from "react"
 
-const Card = () => {
+interface IProps {
+  title?: string
+}
+
+const Card: React.FC<IProps> = () => {
   return (
     <Box
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
