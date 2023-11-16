@@ -1,3 +1,5 @@
 {
-  "app.title": "Tiêu đề"
+  "app.title": "Tiêu đề",
+  "language-selector.languages.vi": "Tiếng Việt",
+  "language-selector.languages.en": "Tiếng Anh"
 }

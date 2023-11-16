@@ -4,7 +4,6 @@ const LanguageSelector = () => {
   const [t, i18n] = useTranslation()
   return (
     <div style={{ display: "flex" }}>
-      <span>{t("language-selector.label")} </span>
       <button onClick={() => i18n.changeLanguage("vi")}>
         {t("language-selector.languages.vi")}
       </button>

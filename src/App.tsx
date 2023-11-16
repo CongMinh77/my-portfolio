@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next"
 import "./App.css"
 import LanguageSelector from "./components/LanguageSelector"
 import Routing from "./routes/routing"
-import { useTranslation } from "react-i18next"
 
 function App() {
   const { t } = useTranslation()

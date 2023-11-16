@@ -1,3 +1,5 @@
 {
-  "app.title": "Title"
+  "app.title": "Title",
+  "language-selector.languages.vi": "Vietnamese",
+  "language-selector.languages.en": "English"
 }
