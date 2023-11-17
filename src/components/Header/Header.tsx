@@ -1,19 +1,22 @@
 import {
   AppBar,
-  Container,
-  Toolbar,
-  Typography,
+  Avatar,
   Box,
+  Button,
+  Container,
   IconButton,
   Menu,
   MenuItem,
-  Button,
+  Toolbar,
   Tooltip,
-  Avatar
+  Typography
 } from "@mui/material"
 import React from "react"
+import NCM from "../../assets/logo-white.png"
+import AvatarLogo from "../../assets/avatar.png"
+import LanguageSelector from "../LanguageSelector"
 
-const pages = ["Products", "Pricing", "Blog"]
+const pages = ["Home", "About", "Blog"]
 const settings = ["Profile", "Account", "Dashboard", "Logout"]
 
 const Header = () => {
@@ -42,23 +45,7 @@ const Header = () => {
       <AppBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none"
-              }}>
-              LOGO
-            </Typography>
+            <img alt="Logo" style={{ height: 50 }} src={NCM} />
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -94,7 +81,6 @@ const Header = () => {
                 ))}
               </Menu>
             </Box>
-            {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
             <Typography
               variant="h5"
               noWrap
@@ -124,9 +110,10 @@ const Header = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
+              <LanguageSelector />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar alt="MinhNC" src={AvatarLogo} />
                 </IconButton>
               </Tooltip>
               <Menu
