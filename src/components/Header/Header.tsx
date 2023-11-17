@@ -19,12 +19,14 @@ import LanguageSelector from "../LanguageSelector"
 import MenuIcon from "@mui/icons-material/Menu"
 import { useTranslation } from "react-i18next"
 
+const pages = ["home", "about", "blog"]
+const settings = ["Profile", "Account"]
+
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
 
-  const pages = [t("nav.home"), t("nav.about"), t("nav.blog")]
-  const settings = ["Profile", "Account"]
+  
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -82,7 +84,9 @@ const Header = () => {
                 }}>
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                      {t(`nav.${page}`)}
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
