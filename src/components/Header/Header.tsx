@@ -11,15 +11,21 @@ import {
   Tooltip,
   Typography
 } from "@mui/material"
-import React from "react"
+import React, { useEffect } from "react"
 import NCM from "../../assets/logo-white.png"
+import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
 import LanguageSelector from "../LanguageSelector"
-
-const pages = ["Home", "About", "Blog"]
-const settings = ["Profile", "Account", "Dashboard", "Logout"]
+import MenuIcon from "@mui/icons-material/Menu"
+import { useTranslation } from "react-i18next"
 
 const Header = () => {
+  useEffect(() => {}, [])
+  const [t] = useTranslation()
+
+  const pages = [t("nav.home"), t("nav.about"), t("nav.blog")]
+  const settings = ["Profile", "Account"]
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
@@ -55,7 +61,7 @@ const Header = () => {
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
                 color="inherit">
-                {/* <MenuIcon /> */}
+                <MenuIcon />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -81,23 +87,16 @@ const Header = () => {
                 ))}
               </Menu>
             </Box>
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+            <Box
               sx={{
                 mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
                 letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none"
+                color: "inherit"
               }}>
-              LOGO
-            </Typography>
+              <img alt="Logo" style={{ height: 50 }} src={SignNCM} />
+            </Box>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
@@ -109,7 +108,7 @@ const Header = () => {
               ))}
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
+            <Box sx={{ flexGrow: 0, display: "flex" }}>
               <LanguageSelector />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

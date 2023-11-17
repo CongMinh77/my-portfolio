@@ -1,5 +1,10 @@
 {
   "app.title": "Tiêu đề",
   "language-selector.languages.vi": "Tiếng Việt",
-  "language-selector.languages.en": "Tiếng Anh"
+  "language-selector.languages.en": "Tiếng Anh",
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về tôi",
+    "blog": "Blog"
+  }
 }
