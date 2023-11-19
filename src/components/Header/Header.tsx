@@ -1,3 +1,4 @@
+import MenuIcon from "@mui/icons-material/Menu"
 import {
   AppBar,
   Avatar,
@@ -12,12 +13,12 @@ import {
   Typography
 } from "@mui/material"
 import React, { useEffect } from "react"
-import NCM from "../../assets/logo-white.png"
+import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
+import NCM from "../../assets/logo-white.png"
 import LanguageSelector from "../LanguageSelector"
-import { useTranslation } from "react-i18next"
-import MenuIcon from "@mui/icons-material/Menu"
 
 const pages = ["home", "about", "blog"]
 const settings = ["Profile", "Account"]
@@ -25,6 +26,7 @@ const settings = ["Profile", "Account"]
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
+  const navigate = useNavigate()
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -39,6 +41,7 @@ const Header = () => {
   }
 
   const handleCloseNavMenu = () => {
+    navigate("/about")
     setAnchorElNav(null)
   }
 
@@ -99,13 +102,18 @@ const Header = () => {
               }}>
               <img alt="Logo" style={{ height: 50 }} src={SignNCM} />
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "space-around"
+              }}>
               {pages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}>
-                  {page}
+                  t(`nav.${page}`)
                 </Button>
               ))}
             </Box>

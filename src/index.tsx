@@ -1,14 +1,17 @@
+import i18next from "i18next"
 import React from "react"
 import ReactDOM from "react-dom/client"
-import "./index.css"
-import App from "./App"
-import reportWebVitals from "./reportWebVitals"
 import { I18nextProvider } from "react-i18next"
-import i18next from "i18next"
-import en from "./locales/en.json"
-import vi from "./locales/vi.json"
+import App from "./App"
 import ErrorBlock from "./components/ErrorBlock"
 import ErrorBoundary from "./components/ErrorBoundary"
+import "./index.css"
+import en from "./locales/en.json"
+import vi from "./locales/vi.json"
+import reportWebVitals from "./reportWebVitals"
+import { ThemeProvider } from "@mui/styles"
+import MyTheme from "./themes/MyTheme"
+import { BrowserRouter } from "react-router-dom"
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -26,11 +29,15 @@ i18next.init({
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
-    <ErrorBoundary fallback={ErrorBlock}>
-      <I18nextProvider i18n={i18next}>
-        <App />
-      </I18nextProvider>
-    </ErrorBoundary>
+    <ThemeProvider theme={MyTheme}>
+      {/* <BrowserRouter> */}
+      <ErrorBoundary fallback={ErrorBlock}>
+        <I18nextProvider i18n={i18next}>
+          <App />
+        </I18nextProvider>
+      </ErrorBoundary>
+      {/* </BrowserRouter> */}
+    </ThemeProvider>
   </React.StrictMode>
 )
 
