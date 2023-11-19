@@ -16,8 +16,8 @@ import NCM from "../../assets/logo-white.png"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
 import LanguageSelector from "../LanguageSelector"
-import MenuIcon from "@mui/icons-material/Menu"
 import { useTranslation } from "react-i18next"
+import MenuIcon from "@mui/icons-material/Menu"
 
 const pages = ["home", "about", "blog"]
 const settings = ["Profile", "Account"]
@@ -25,8 +25,6 @@ const settings = ["Profile", "Account"]
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
-
-  
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
