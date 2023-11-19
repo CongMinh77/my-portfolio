@@ -14,7 +14,6 @@ import {
 } from "@mui/material"
 import React, { useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { useNavigate } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
 import NCM from "../../assets/logo-white.png"
@@ -26,7 +25,7 @@ const settings = ["Profile", "Account"]
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -41,7 +40,7 @@ const Header = () => {
   }
 
   const handleCloseNavMenu = () => {
-    navigate("/about")
+    // navigate("/about")
     setAnchorElNav(null)
   }
 
@@ -113,7 +112,7 @@ const Header = () => {
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}>
-                  t(`nav.${page}`)
+                  {t(`nav.${page}`)}
                 </Button>
               ))}
             </Box>

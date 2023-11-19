@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles"
+import { COLORS } from "../constants"
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -67,13 +68,13 @@ declare module "@mui/material/styles" {
 export default createTheme({
   header: {
     height: 60,
-    bg: "#fff",
+    bg: COLORS.WHITE,
     color: "#222b45"
   },
   sidebar: {
     width: 224,
     bg: "#091a7a",
-    fontColor: "#fff"
+    fontColor: COLORS.WHITE
   },
   footer: {
     height: 150
@@ -91,7 +92,7 @@ export default createTheme({
     }
   },
   typography: {
-    fontFamily: '"Montserrat", sans-serif',
+    fontFamily: '"Quicksand", sans-serif',
     fontSize: 12,
     fontWeightRegular: 400,
     fontWeightMedium: 500,
