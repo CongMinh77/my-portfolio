@@ -16,6 +16,7 @@ const Routing = () => {
     <>
       <Routes>
         <Route path="/" Component={Home} />
+        <Route path="/home" Component={Home} />
         <Route path="/about" Component={About} />
         {/* <RouterProvider router={router} /> */}
       </Routes>

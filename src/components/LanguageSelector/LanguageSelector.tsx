@@ -11,7 +11,10 @@ const LanguageSelector = () => {
       <Button
         variant="outlined"
         sx={{ paddingX: 0 }}
-        onClick={() => i18n.changeLanguage("vi")}>
+        onClick={() => {
+          i18n.changeLanguage("vi")
+          localStorage.setItem("locale", "vi")
+        }}>
         <Tooltip title={t("language-selector.languages.vi")}>
           <img src={ViFlag} style={{ height: 20 }} alt="ViFlag" />
         </Tooltip>
@@ -19,7 +22,10 @@ const LanguageSelector = () => {
       <Button
         variant="outlined"
         sx={{ paddingX: 0 }}
-        onClick={() => i18n.changeLanguage("en")}>
+        onClick={() => {
+          i18n.changeLanguage("en")
+          localStorage.setItem("locale", "en")
+        }}>
         <Tooltip title={t("language-selector.languages.en")}>
           <img src={EnFlag} style={{ height: 20 }} alt="EnFlag" />
         </Tooltip>

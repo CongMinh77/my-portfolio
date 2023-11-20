@@ -14,9 +14,10 @@ import MyTheme from "./themes/MyTheme"
 import { BrowserRouter } from "react-router-dom"
 import { LinearProgress } from "@mui/material"
 
+const locale = localStorage.getItem("locale")
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
-  lng: "en", // Language to use
+  lng: locale ?? "en", // Language to use
   resources: {
     en: {
       translation: en
