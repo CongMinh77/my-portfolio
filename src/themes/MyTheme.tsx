@@ -81,7 +81,7 @@ export default createTheme({
   },
   palette: {
     background: {
-      default: "#ededef"
+      default: COLORS.WHITE_ED
     },
     secondary: {
       main: "#F37029"

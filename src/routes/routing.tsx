@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, Route, Routes } from "react-router-dom"
 import { About, Home } from "../pages"
 
 const Routing = () => {
@@ -14,7 +14,11 @@ const Routing = () => {
   ])
   return (
     <>
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        {/* <RouterProvider router={router} /> */}
+      </Routes>
     </>
   )
 }

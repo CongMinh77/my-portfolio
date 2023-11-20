@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@mui/styles"
 import i18next from "i18next"
-import React from "react"
+import React, { Suspense } from "react"
 import ReactDOM from "react-dom/client"
 import { I18nextProvider } from "react-i18next"
 import App from "./App"
@@ -11,6 +11,8 @@ import en from "./locales/en.json"
 import vi from "./locales/vi.json"
 import reportWebVitals from "./reportWebVitals"
 import MyTheme from "./themes/MyTheme"
+import { BrowserRouter } from "react-router-dom"
+import { LinearProgress } from "@mui/material"
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -29,11 +31,15 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={MyTheme}>
-      <ErrorBoundary fallback={ErrorBlock}>
-        <I18nextProvider i18n={i18next}>
-          <App />
-        </I18nextProvider>
-      </ErrorBoundary>
+      <I18nextProvider i18n={i18next}>
+        <BrowserRouter basename="/">
+          <ErrorBoundary fallback={ErrorBlock}>
+            <Suspense fallback={<LinearProgress />}>
+              <App />
+            </Suspense>
+          </ErrorBoundary>
+        </BrowserRouter>
+      </I18nextProvider>
     </ThemeProvider>
   </React.StrictMode>
 )

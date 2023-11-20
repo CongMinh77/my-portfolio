@@ -14,18 +14,18 @@ import {
 } from "@mui/material"
 import React, { useEffect } from "react"
 import { useTranslation } from "react-i18next"
+import { Link, NavLink } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
 import NCM from "../../assets/logo-white.png"
 import LanguageSelector from "../LanguageSelector"
 
-const pages = ["home", "about", "blog"]
+const pages = ["home", "service", "resume", "about", "blog", "contact"]
 const settings = ["Profile", "Account"]
 
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
-  // const navigate = useNavigate()
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -40,7 +40,6 @@ const Header = () => {
   }
 
   const handleCloseNavMenu = () => {
-    // navigate("/about")
     setAnchorElNav(null)
   }
 
@@ -85,7 +84,7 @@ const Header = () => {
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">
-                      {t(`nav.${page}`)}
+                      <Link to={`/${page}`}>{t(`nav.${page}`)}</Link>
                     </Typography>
                   </MenuItem>
                 ))}
@@ -108,12 +107,14 @@ const Header = () => {
                 justifyContent: "space-around"
               }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}>
-                  {t(`nav.${page}`)}
-                </Button>
+                <NavLink to={`/${page}`}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}>
+                    {t(`nav.${page}`)}
+                  </Button>
+                </NavLink>
               ))}
             </Box>
 

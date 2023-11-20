@@ -6,7 +6,11 @@ import Routing from "./routes/routing"
 function App() {
   return (
     <Box
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+      }}>
       <Header />
       <Box sx={{ marginTop: "70px" }}>
         <Routing />

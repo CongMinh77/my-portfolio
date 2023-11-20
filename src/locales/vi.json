@@ -1,10 +1,30 @@
 {
-  "app.title": "Tiêu đề",
   "language-selector.languages.vi": "Tiếng Việt",
   "language-selector.languages.en": "Tiếng Anh",
   "nav": {
     "home": "Trang chủ",
     "about": "Về tôi",
-    "blog": "Blog"
+    "blog": "Blog",
+    "contact": "Liên hệ",
+    "resume": "Tóm tắt",
+    "service": "Dịch vụ"
+  },
+  "about": {
+    "title": "Về tôi",
+    "ecommerce": "Thương mại điện tử",
+    "development": "Lập trình viên",
+    "design": "Thiết kế"
+  },
+  "home": {
+    "title": "Trang chủ"
+  },
+  "error": {
+    "403": "Xin lỗi, bạn không thể truy cập nội dung này",
+    "404": "Xin lỗi, nội dung hoặc trang bạn truy cập không tồn tại",
+    "500": "Đã có lỗi kỹ thuật",
+    "other": "Không thể truy cập máy chủ, có thể lỗi kỹ thuật hoặc do vấn đề mạng của bạn"
+  },
+  "button": {
+    "go-back-home": "Trở về trang chủ"
   }
 }
