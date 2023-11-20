@@ -1,5 +1,6 @@
 import { createBrowserRouter, Route, Routes } from "react-router-dom"
 import { About, Home } from "../pages"
+import ErrorBlock from "../components/ErrorBlock"
 
 const Routing = () => {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const Routing = () => {
         <Route path="/" Component={Home} />
         <Route path="/home" Component={Home} />
         <Route path="/about" Component={About} />
+        <Route path="*" element={<ErrorBlock variant="404" />} />
         {/* <RouterProvider router={router} /> */}
       </Routes>
     </>

@@ -12,11 +12,11 @@ const useStyles = makeStyles(styles)
 const getImgBg = (variant: string): string => {
   switch (variant) {
     case "403":
-      return "/imgs/403.svg"
+      return "../../assets/403.svg"
     case "404":
-      return "/imgs/404.svg"
+      return "../../assets/404.svg"
     default:
-      return "/imgs/500.svg"
+      return "../../assets/500.svg"
   }
 }
 

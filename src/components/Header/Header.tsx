@@ -107,7 +107,7 @@ const Header = () => {
                 justifyContent: "space-around"
               }}>
               {pages.map((page) => (
-                <NavLink to={`/${page}`}>
+                <NavLink key={page} to={`/${page}`}>
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
