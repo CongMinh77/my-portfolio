@@ -1,38 +1,41 @@
 import { Button, Container, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles"
+import { assign } from "lodash"
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { ErrorFallbackProps } from "../ErrorBoundary/ErrorBoundary"
 import { styles } from "./styles"
-import { assign } from "lodash"
+import { TFunction } from "i18next"
 
 const useStyles = makeStyles(styles)
 
 const getImgBg = (variant: string): string => {
   switch (variant) {
     case "403":
-      return "/imgs/403.svg"
+      return "../../assets/403.svg"
     case "404":
-      return "/imgs/404.svg"
+      return "../../assets/404.svg"
     default:
-      return "/imgs/500.svg"
+      return "../../assets/500.svg"
   }
 }
 
 const getDefaultTitle = (
   variant: string,
-  title: string | undefined
+  title: string | undefined,
+  t: TFunction<"translation", undefined>
 ): string => {
   if (title) return title
 
   switch (variant) {
     case "403":
-      return "Xin lỗi, bạn không thể truy cập nội dung này"
+      return t("error.403")
     case "404":
-      return "Xin lỗi, nội dung hoặc trang bạn truy cập không tồn tại"
+      return t("error.404")
     case "500":
-      return "Đã có lỗi kỹ thuật, vui lòng liên hệ DVKH nếu trường hợp khẩn thiệt"
+      return t("error.500")
     default:
-      return "Không thể truy cập máy chủ, có thể lỗi kỹ thuật hoặc do vấn đề mạng của bạn"
+      return t("error.other")
   }
 }
 
@@ -47,8 +50,9 @@ interface INormalErrorBlockProps {
 }
 
 const DisplayBlock: React.FC<INormalErrorBlockProps> = (props) => {
+  const { t } = useTranslation()
   const defaultProps = {
-    backButtonTitle: "Trở về trang chủ",
+    backButtonTitle: t("button.go-back-home"),
     backButton: true,
     backUrl: "/"
   }
@@ -64,7 +68,7 @@ const DisplayBlock: React.FC<INormalErrorBlockProps> = (props) => {
   } = props
   const classes = useStyles()
   const imgBg = getImgBg(variant)
-  const title = getDefaultTitle(variant, props.title)
+  const title = getDefaultTitle(variant, props.title, t)
 
   console.debug("ErrorBlock", props)
 

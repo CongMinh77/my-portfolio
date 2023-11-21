@@ -1,18 +1,23 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import "./index.css"
-import App from "./App"
-import reportWebVitals from "./reportWebVitals"
-import { I18nextProvider } from "react-i18next"
+import { ThemeProvider } from "@mui/styles"
 import i18next from "i18next"
-import en from "./locales/en.json"
-import vi from "./locales/vi.json"
+import React, { Suspense } from "react"
+import ReactDOM from "react-dom/client"
+import { I18nextProvider } from "react-i18next"
+import App from "./App"
 import ErrorBlock from "./components/ErrorBlock"
 import ErrorBoundary from "./components/ErrorBoundary"
+import "./index.css"
+import en from "./locales/en.json"
+import vi from "./locales/vi.json"
+import reportWebVitals from "./reportWebVitals"
+import MyTheme from "./themes/MyTheme"
+import { BrowserRouter } from "react-router-dom"
+import { LinearProgress } from "@mui/material"
 
+const locale = localStorage.getItem("locale")
 i18next.init({
-  interpolation: { escapeValue: false }, // React already does escaping
-  lng: "en", // Language to use
+  interpolation: { escapeValue: false },
+  lng: locale ?? "en", // Language currently used
   resources: {
     en: {
       translation: en
@@ -26,11 +31,17 @@ i18next.init({
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
-    <ErrorBoundary fallback={ErrorBlock}>
+    <ThemeProvider theme={MyTheme}>
       <I18nextProvider i18n={i18next}>
-        <App />
+        <BrowserRouter basename="/">
+          <ErrorBoundary fallback={ErrorBlock}>
+            <Suspense fallback={<LinearProgress />}>
+              <App />
+            </Suspense>
+          </ErrorBoundary>
+        </BrowserRouter>
       </I18nextProvider>
-    </ErrorBoundary>
+    </ThemeProvider>
   </React.StrictMode>
 )
 

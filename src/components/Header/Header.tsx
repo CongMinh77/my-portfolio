@@ -1,3 +1,4 @@
+import MenuIcon from "@mui/icons-material/Menu"
 import {
   AppBar,
   Avatar,
@@ -12,19 +13,19 @@ import {
   Typography
 } from "@mui/material"
 import React, { useEffect } from "react"
-import NCM from "../../assets/logo-white.png"
+import { useTranslation } from "react-i18next"
+import { Link, NavLink } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
+import NCM from "../../assets/logo-white.png"
 import LanguageSelector from "../LanguageSelector"
-import MenuIcon from "@mui/icons-material/Menu"
-import { useTranslation } from "react-i18next"
+
+const pages = ["home", "service", "resume", "about", "blog", "contact"]
+const settings = ["Profile", "Account"]
 
 const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
-
-  const pages = [t("nav.home"), t("nav.about"), t("nav.blog")]
-  const settings = ["Profile", "Account"]
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
@@ -82,11 +83,14 @@ const Header = () => {
                 }}>
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                      <Link to={`/${page}`}>{t(`nav.${page}`)}</Link>
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
+
             <Box
               sx={{
                 mr: 2,
@@ -97,14 +101,21 @@ const Header = () => {
               }}>
               <img alt="Logo" style={{ height: 50 }} src={SignNCM} />
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "space-around"
+              }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}>
-                  {page}
-                </Button>
+                <NavLink key={page} to={`/${page}`}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: "white", display: "block" }}>
+                    {t(`nav.${page}`)}
+                  </Button>
+                </NavLink>
               ))}
             </Box>
 

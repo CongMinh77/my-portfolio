@@ -1,5 +1,7 @@
 export const COLORS = {
-  primary: "#3F51B5",
-  secondary: "#00BCD4",
-  error: "#F44336",
+  WHITE: "#fff",
+  WHITE_CC: "#CCC",
+  WHITE_ED: "#EDEDED",
+  HEADER_COLOR: "#222b45",
+  
 }

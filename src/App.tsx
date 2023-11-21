@@ -1,16 +1,21 @@
-import { useTranslation } from "react-i18next"
+import { Box } from "@mui/material"
 import "./App.css"
 import Header from "./components/Header"
 import Routing from "./routes/routing"
 
 function App() {
-  const { t } = useTranslation()
   return (
-    <div className="App">
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+      }}>
       <Header />
-      <h2>{t("app.title")}</h2>
-      <Routing />
-    </div>
+      <Box sx={{ marginTop: "70px", width: "100%" }}>
+        <Routing />
+      </Box>
+    </Box>
   )
 }
 
