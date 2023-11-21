@@ -103,10 +103,10 @@ export default createTheme({
   },
   customs: {
     color: {
-      success: "#007E33",
-      danger: "#f50057",
+      success: COLORS.SUCCESS,
+      danger: COLORS.ERROR,
       border: {
-        main: "#c8c8c8"
+        main: COLORS.WHITE_C8
       }
     },
     button: {
