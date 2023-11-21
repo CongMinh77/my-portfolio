@@ -69,7 +69,7 @@ export default createTheme({
   header: {
     height: 60,
     bg: COLORS.WHITE,
-    color: "#222b45"
+    color: COLORS.HEADER_COLOR
   },
   sidebar: {
     width: 224,

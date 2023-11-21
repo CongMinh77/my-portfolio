@@ -26,5 +26,8 @@
   },
   "button": {
     "go-back-home": "Trở về trang chủ"
+  },
+  "service": {
+    "title": "Dịch vụ"
   }
 }

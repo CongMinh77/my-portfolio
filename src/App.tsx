@@ -12,7 +12,7 @@ function App() {
         alignItems: "center"
       }}>
       <Header />
-      <Box sx={{ marginTop: "70px" }}>
+      <Box sx={{ marginTop: "70px", width: "100%" }}>
         <Routing />
       </Box>
     </Box>

@@ -6,15 +6,17 @@ import { Button, Tooltip } from "@mui/material"
 
 const LanguageSelector = () => {
   const [t, i18n] = useTranslation()
+
+  const handleChangeLocale = (locale: string) => {
+    i18n.changeLanguage(locale)
+    localStorage.setItem("locale", locale)
+  }
   return (
     <div style={{ display: "flex" }}>
       <Button
         variant="outlined"
         sx={{ paddingX: 0 }}
-        onClick={() => {
-          i18n.changeLanguage("vi")
-          localStorage.setItem("locale", "vi")
-        }}>
+        onClick={() => handleChangeLocale("vi")}>
         <Tooltip title={t("language-selector.languages.vi")}>
           <img src={ViFlag} style={{ height: 20 }} alt="ViFlag" />
         </Tooltip>
@@ -22,10 +24,7 @@ const LanguageSelector = () => {
       <Button
         variant="outlined"
         sx={{ paddingX: 0 }}
-        onClick={() => {
-          i18n.changeLanguage("en")
-          localStorage.setItem("locale", "en")
-        }}>
+        onClick={() => handleChangeLocale("en")}>
         <Tooltip title={t("language-selector.languages.en")}>
           <img src={EnFlag} style={{ height: 20 }} alt="EnFlag" />
         </Tooltip>

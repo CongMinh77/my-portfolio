@@ -26,5 +26,8 @@
   },
   "button": {
     "go-back-home": "Go to home page"
+  },
+  "service": {
+    "title": "Service"
   }
 }

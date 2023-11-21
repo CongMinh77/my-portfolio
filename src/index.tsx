@@ -16,8 +16,8 @@ import { LinearProgress } from "@mui/material"
 
 const locale = localStorage.getItem("locale")
 i18next.init({
-  interpolation: { escapeValue: false }, // React already does escaping
-  lng: locale ?? "en", // Language to use
+  interpolation: { escapeValue: false },
+  lng: locale ?? "en", // Language currently used
   resources: {
     en: {
       translation: en
