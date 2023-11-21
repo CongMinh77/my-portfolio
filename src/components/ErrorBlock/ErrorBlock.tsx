@@ -6,17 +6,20 @@ import { useTranslation } from "react-i18next"
 import { ErrorFallbackProps } from "../ErrorBoundary/ErrorBoundary"
 import { styles } from "./styles"
 import { TFunction } from "i18next"
+import Error404 from "../../assets/404.svg"
+import Error403 from "../../assets/403.svg"
+import ErrorOther from "../../assets/500.svg"
 
 const useStyles = makeStyles(styles)
 
 const getImgBg = (variant: string): string => {
   switch (variant) {
     case "403":
-      return "../../assets/403.svg"
+      return Error403
     case "404":
-      return "../../assets/404.svg"
+      return Error404
     default:
-      return "../../assets/500.svg"
+      return ErrorOther
   }
 }
 
@@ -70,17 +73,14 @@ const DisplayBlock: React.FC<INormalErrorBlockProps> = (props) => {
   const imgBg = getImgBg(variant)
   const title = getDefaultTitle(variant, props.title, t)
 
-  console.debug("ErrorBlock", props)
-
+  console.debug("imgBg", imgBg)
   document.title = `${variant} - ${title}`
 
   return (
     <Container maxWidth="lg">
       <div className={classes.root}>
         <div className="img-block">
-          <div
-            className="img-element"
-            style={{ backgroundImage: `url("${imgBg}")` }}></div>
+          <img className="img-element" src={imgBg} alt="404" />
         </div>
         <div className="content-block">
           <Typography variant="h1" gutterBottom>
@@ -124,6 +124,7 @@ interface IProps extends ErrorFallbackProps {
 
 const ErrorBlock: React.FC<IProps> = (props) => {
   const { error, variant, title, ...rest } = props
+
   if (error) {
     return <DisplayBlock variant="503" title={error.message} {...rest} />
   }

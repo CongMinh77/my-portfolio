@@ -29,5 +29,8 @@
   },
   "service": {
     "title": "Service"
+  },
+  "resume": {
+    "title": "Resume"
   }
 }
