@@ -13,7 +13,8 @@
     "title": "Về tôi",
     "ecommerce": "Thương mại điện tử",
     "development": "Lập trình viên",
-    "design": "Thiết kế"
+    "design": "Thiết kế",
+    "my-bio": "Tiểu sử của tôi"
   },
   "home": {
     "title": "Trang chủ"
@@ -29,5 +30,10 @@
   },
   "service": {
     "title": "Dịch vụ"
+  },
+  "resume": {
+    "title": "Bản tóm tắt",
+    "work-experience": "Kinh nghiệm làm việc",
+    "education": "Học vấn"
   }
 }

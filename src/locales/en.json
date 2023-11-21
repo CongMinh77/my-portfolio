@@ -13,7 +13,8 @@
     "title": "About",
     "ecommerce": "Ecommerce",
     "development": "Development",
-    "design": "Design"
+    "design": "Design",
+    "my-bio": "My bio"
   },
   "home": {
     "title": "Home"
@@ -31,6 +32,8 @@
     "title": "Service"
   },
   "resume": {
-    "title": "Resume"
+    "title": "Resume",
+    "work-experience": "Work experience",
+    "education": "Education"
   }
 }

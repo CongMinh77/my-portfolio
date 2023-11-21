@@ -21,7 +21,7 @@ const About = () => {
         </Grid>
         <Grid item xs={7}>
           <Box>
-            <Typography variant="h4">My Bio</Typography>
+            <Typography variant="h4">{t("about.my-bio")}</Typography>
             <Typography style={{ marginTop: 10 }}>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated

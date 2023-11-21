@@ -6,7 +6,7 @@ import {
 import { Grid } from "@mui/material"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import Card from "../../components/Card"
+import ServiceCard from "../../components/ServiceCard"
 import { getPageTitle } from "../../utils"
 
 interface ICard {
@@ -45,7 +45,7 @@ const Service = () => {
       <Grid container>
         {cards.map((card) => (
           <Grid key={card.title} item xs={4}>
-            <Card
+            <ServiceCard
               title={t(`about.${card.title}`)}
               icon={card.icon}
               description={card.description}
