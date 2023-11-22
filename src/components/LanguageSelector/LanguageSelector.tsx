@@ -13,18 +13,12 @@ const LanguageSelector = () => {
   }
   return (
     <div style={{ display: "flex" }}>
-      <Button
-        variant="outlined"
-        sx={{ paddingX: 0 }}
-        onClick={() => handleChangeLocale("vi")}>
+      <Button sx={{ paddingX: 0 }} onClick={() => handleChangeLocale("vi")}>
         <Tooltip title={t("language-selector.languages.vi")}>
           <img src={ViFlag} style={{ height: 20 }} alt="ViFlag" />
         </Tooltip>
       </Button>
-      <Button
-        variant="outlined"
-        sx={{ paddingX: 0 }}
-        onClick={() => handleChangeLocale("en")}>
+      <Button sx={{ paddingX: 0 }} onClick={() => handleChangeLocale("en")}>
         <Tooltip title={t("language-selector.languages.en")}>
           <img src={EnFlag} style={{ height: 20 }} alt="EnFlag" />
         </Tooltip>

@@ -17,7 +17,8 @@ import { useTranslation } from "react-i18next"
 import { Link, NavLink } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
-import NCM from "../../assets/logo-white.png"
+import NCM from "../../assets/logo.png"
+import { PALETTES_1 } from "../../constants"
 import LanguageSelector from "../LanguageSelector"
 
 const pages = ["home", "service", "resume", "about", "contact"]
@@ -49,7 +50,10 @@ const Header = () => {
 
   return (
     <>
-      <AppBar>
+      <AppBar
+        style={{
+          backgroundColor: PALETTES_1.BLUE
+        }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Link to="/">
@@ -120,7 +124,11 @@ const Header = () => {
                     <Button
                       key={page}
                       onClick={handleCloseNavMenu}
-                      sx={{ my: 2, color: "white", display: "block" }}>
+                      sx={{
+                        my: 2,
+                        color: PALETTES_1.BLACK,
+                        display: "block"
+                      }}>
                       {t(`nav.${page}`)}
                     </Button>
                   </NavLink>
