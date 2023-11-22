@@ -20,7 +20,7 @@ import AvatarLogo from "../../assets/avatar.png"
 import NCM from "../../assets/logo-white.png"
 import LanguageSelector from "../LanguageSelector"
 
-const pages = ["home", "service", "resume", "about", "blog", "contact"]
+const pages = ["home", "service", "resume", "about", "contact"]
 const settings = ["Profile", "Account"]
 
 const Header = () => {
@@ -52,7 +52,9 @@ const Header = () => {
       <AppBar>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <img alt="Logo" style={{ height: 50 }} src={NCM} />
+            <Link to="/">
+              <img alt="Logo" style={{ height: 50 }} src={NCM} />
+            </Link>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -107,16 +109,23 @@ const Header = () => {
                 display: { xs: "none", md: "flex" },
                 justifyContent: "space-around"
               }}>
-              {pages.map((page) => (
-                <NavLink key={page} to={`/${page}`}>
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}>
-                    {t(`nav.${page}`)}
-                  </Button>
-                </NavLink>
-              ))}
+              <Box
+                sx={{
+                  minWidth: "50vw",
+                  display: { xs: "none", md: "flex" },
+                  justifyContent: "space-around"
+                }}>
+                {pages.map((page) => (
+                  <NavLink key={page} to={`/${page}`}>
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{ my: 2, color: "white", display: "block" }}>
+                      {t(`nav.${page}`)}
+                    </Button>
+                  </NavLink>
+                ))}
+              </Box>
             </Box>
 
             <Box sx={{ flexGrow: 0, display: "flex" }}>

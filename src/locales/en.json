@@ -35,5 +35,8 @@
     "title": "Resume",
     "work-experience": "Work experience",
     "education": "Education"
+  },
+  "contact": {
+    "title": "Contact me"
   }
 }

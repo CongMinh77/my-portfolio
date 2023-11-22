@@ -14,12 +14,12 @@ const About = () => {
     <div style={{ width: "100%" }}>
       <h1 style={{ textAlign: "center" }}>{t("about.title")}</h1>
       <Grid container>
-        <Grid item xs={5}>
+        <Grid item xs={4}>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
-            <img src={AvatarLogo} alt="avt-bio" style={{ height: 400 }} />
+            <img src={AvatarLogo} alt="avt-bio" style={{ width: "100%" }} />
           </Box>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={8}>
           <Box>
             <Typography variant="h4">{t("about.my-bio")}</Typography>
             <Typography style={{ marginTop: 10 }}>

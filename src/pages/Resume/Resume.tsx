@@ -5,6 +5,15 @@ import { Box, Grid, Typography } from "@mui/material"
 import AvatarLogo from "../../assets/avatar.png"
 import WorkExperienceCard from "../../components/WorkExperienceCard"
 
+const careerPath = [
+  {
+    jobTitle: "Front End Developer",
+    company: "Facebook, Inc.",
+    date: "November 2019 - Present",
+    typeOfWork: "Full time"
+  }
+]
+
 const Resume = () => {
   const [t] = useTranslation()
   useEffect(() => {
@@ -17,25 +26,31 @@ const Resume = () => {
       <Grid container>
         <Grid item xs={4}>
           <Box sx={{ display: "flex", justifyContent: "end" }}>
-            <img src={AvatarLogo} alt="avt-bio" style={{ height: 400 }} />
+            <img src={AvatarLogo} alt="avt-bio" style={{ width: "100%" }} />
           </Box>
         </Grid>
         <Grid item xs={8}>
           <Box>
             <Typography variant="h4">{t("resume.work-experience")}</Typography>
-            <WorkExperienceCard />
+            {careerPath &&
+              careerPath.map((career) => (
+                <WorkExperienceCard
+                  key={career.jobTitle}
+                  jobTitle={career.jobTitle}
+                  date={career.date}
+                  typeOfWork={career.typeOfWork}
+                  company={career.company}
+                />
+              ))}
           </Box>
           <Box marginTop={3}>
             <Typography variant="h4">{t("resume.education")}</Typography>
-            <Typography style={{ marginTop: 10 }}>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country, in which roasted parts of sentences fly
-              into your mouth.
-            </Typography>
+            <WorkExperienceCard
+              jobTitle={"Thang Long University"}
+              date={"2018 - 2022"}
+              typeOfWork={"Bachelor"}
+              company={"Computer Science"}
+            />
           </Box>
         </Grid>
       </Grid>
