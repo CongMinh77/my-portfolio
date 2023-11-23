@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { getPageTitle } from "../../utils"
+import Footer from "../../components/Footer"
 
 const Home = () => {
   const [t] = useTranslation()
@@ -10,6 +11,8 @@ const Home = () => {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>{t("home.title")}</h1>
+
+      <Footer />
     </>
   )
 }

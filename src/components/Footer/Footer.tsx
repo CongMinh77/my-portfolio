@@ -1,7 +1,9 @@
+import { Facebook, Instagram, LinkedIn } from "@mui/icons-material"
+import { Box, IconButton, Typography } from "@mui/material"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
+import { PALETTES_1 } from "../../constants"
 import { getPageTitle } from "../../utils"
-import { Box } from "@mui/material"
 
 const Footer = () => {
   const [t] = useTranslation()
@@ -10,7 +12,20 @@ const Footer = () => {
   }, [t])
   return (
     <>
-      <Box></Box>
+      <Box sx={{ backgroundColor: PALETTES_1.BLUE }}>
+        <Typography variant="subtitle1">Connect</Typography>
+        <Box sx={{ display: "flex" }}>
+          <IconButton>
+            <Facebook />
+          </IconButton>
+          <IconButton>
+            <Instagram />
+          </IconButton>
+          <IconButton>
+            <LinkedIn />
+          </IconButton>
+        </Box>
+      </Box>
     </>
   )
 }
