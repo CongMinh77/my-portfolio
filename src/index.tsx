@@ -1,8 +1,10 @@
-import { ThemeProvider } from "@mui/styles"
+import { LinearProgress } from "@mui/material"
+import { ThemeProvider } from "@mui/material/styles"
 import i18next from "i18next"
 import React, { Suspense } from "react"
 import ReactDOM from "react-dom/client"
 import { I18nextProvider } from "react-i18next"
+import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import ErrorBlock from "./components/ErrorBlock"
 import ErrorBoundary from "./components/ErrorBoundary"
@@ -11,8 +13,6 @@ import en from "./locales/en.json"
 import vi from "./locales/vi.json"
 import reportWebVitals from "./reportWebVitals"
 import MyTheme from "./themes/MyTheme"
-import { BrowserRouter } from "react-router-dom"
-import { LinearProgress } from "@mui/material"
 
 const locale = localStorage.getItem("locale")
 i18next.init({

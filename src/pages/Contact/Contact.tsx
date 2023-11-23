@@ -52,7 +52,9 @@ const Contact = () => {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Typography variant="h6">{t("contact.info")}</Typography>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            {t("contact.info")}
+          </Typography>
 
           <Box mt={3} sx={{ display: "flex", alignItems: "center" }}>
             <PlaceOutlined />

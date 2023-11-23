@@ -65,7 +65,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-export default createTheme({
+const MyTheme = createTheme({
   header: {
     height: 60,
     bg: COLORS.WHITE,
@@ -92,10 +92,11 @@ export default createTheme({
     }
   },
   typography: {
-    fontFamily: '"Quicksand", sans-serif',
-    fontSize: 12,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
+    fontFamily: `"Quicksand", "sans-serif"`,
+    fontSize: 14,
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
     fontWeightBold: 700
   },
   classroomSidebar: {
@@ -114,3 +115,5 @@ export default createTheme({
     }
   }
 })
+
+export default MyTheme

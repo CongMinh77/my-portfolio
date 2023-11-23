@@ -6,6 +6,7 @@ export const COLORS = {
   HEADER_COLOR: "#222b45",
   SUCCESS: "#007E33",
   ERROR: "#f50057",
+  PRIMARY: "#91B2D1"
 }
 
 export const PALETTES_1 = {
