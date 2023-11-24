@@ -8,6 +8,7 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  Switch,
   Toolbar,
   Tooltip,
   Typography
@@ -28,6 +29,7 @@ const Header = () => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
 
+  const [toggleTheme, setToggleTheme] = React.useState(true)
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
@@ -137,6 +139,14 @@ const Header = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0, display: "flex" }}>
+              <Switch
+                checked={toggleTheme}
+                onChange={() => {
+                  setToggleTheme(!toggleTheme)
+                }}
+                name="theme"
+                color="secondary"
+              />
               <LanguageSelector />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

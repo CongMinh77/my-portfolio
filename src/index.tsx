@@ -1,4 +1,4 @@
-import { LinearProgress } from "@mui/material"
+import { CssBaseline, LinearProgress } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
 import i18next from "i18next"
 import React, { Suspense } from "react"
@@ -32,6 +32,7 @@ const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={MyTheme}>
+      <CssBaseline />
       <I18nextProvider i18n={i18next}>
         <BrowserRouter basename="/">
           <ErrorBoundary fallback={ErrorBlock}>

@@ -42,9 +42,9 @@ const Service = () => {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>{t("service.title")}</h1>
-      <Grid container>
-        {cards.map((card) => (
-          <Grid key={card.title} item xs={4}>
+      <Grid container rowSpacing={2}>
+        {cards.map((card, index) => (
+          <Grid key={`${card.title}-${index}`} item xs={4}>
             <ServiceCard
               title={t(`about.${card.title}`)}
               icon={card.icon}

@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles"
-import { COLORS } from "../constants"
+import { COLORS, PALETTES_1 } from "../constants"
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -80,11 +80,12 @@ const MyTheme = createTheme({
     height: 150
   },
   palette: {
+    mode: "light",
     background: {
       default: COLORS.WHITE_ED
     },
     secondary: {
-      main: "#F37029"
+      main: PALETTES_1.BLACK
     },
     text: {
       primary: "#222b45",
@@ -111,7 +112,7 @@ const MyTheme = createTheme({
       }
     },
     button: {
-      minWidth: 150
+      minWidth: 50
     }
   }
 })
