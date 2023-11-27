@@ -38,6 +38,11 @@
   },
   "contact": {
     "title": "Liên hệ với tôi",
-    "info": "Thông tin liên lạc"
+    "info": "Thông tin liên lạc",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "email-address": "Địa chỉ email",
+    "messenger": "Lời nhắn",
+    "send-messenger": "Gửi tin nhắn"
   }
 }

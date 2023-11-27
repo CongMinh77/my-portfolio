@@ -21,21 +21,33 @@ const Contact = () => {
         <Grid item xs={6} sx={{ padding: 3 }}>
           <Box sx={{ display: "flex", width: "100%" }}>
             <Box sx={{ width: "100%" }}>
-              <TextField fullWidth label="First name" variant="standard" />
+              <TextField
+                fullWidth
+                label={t("contact.first-name")}
+                variant="standard"
+              />
             </Box>
             <Box sx={{ marginLeft: 2, width: "100%" }}>
-              <TextField fullWidth label="Last name" variant="standard" />
+              <TextField
+                fullWidth
+                label={t("contact.last-name")}
+                variant="standard"
+              />
             </Box>
           </Box>
           <Box mt={3}>
-            <TextField fullWidth label="Email address" variant="standard" />
+            <TextField
+              fullWidth
+              label={t("contact.email-address")}
+              variant="standard"
+            />
           </Box>
           <Box mt={3}>
             <TextField
               multiline
               fullWidth
               rows={3}
-              label="Messenger"
+              label={t("contact.messenger")}
               variant="standard"
             />
           </Box>
@@ -47,7 +59,7 @@ const Contact = () => {
                 color: PALETTES_1.BLACK
               }}
               variant="contained">
-              Send messenger
+              {t("contact.send-messenger")}
             </Button>
           </Box>
         </Grid>
@@ -66,8 +78,7 @@ const Contact = () => {
             mt={3}
             sx={{
               display: "flex",
-              alignItems: "center",
-              color: PALETTES_1.GREEN
+              alignItems: "center"
             }}>
             <PhoneAndroidOutlined />
             <Typography ml={2} variant="body1">
@@ -78,8 +89,7 @@ const Contact = () => {
             mt={3}
             sx={{
               display: "flex",
-              alignItems: "center",
-              color: PALETTES_1.GREEN
+              alignItems: "center"
             }}>
             <EmailOutlined />
             <Typography ml={2} variant="body1">

@@ -38,6 +38,11 @@
   },
   "contact": {
     "title": "Contact me",
-    "info": "Contact info"
+    "info": "Contact info",
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email-address": "Email address",
+    "messenger": "Messenger",
+    "send-messenger": "Send messenger"
   }
 }
