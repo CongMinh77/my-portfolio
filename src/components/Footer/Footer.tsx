@@ -21,8 +21,10 @@ const Footer = () => {
                 <img src={NCM} alt="Logo" style={{ height: 100 }} />
               </Box>
               <Box px={3}>
-                <Typography variant="subtitle1">Connect</Typography>
-                <Box sx={{ display: "flex" }}>
+                <Typography variant="subtitle1" sx={{ textAlign: "center" }}>
+                  Connect
+                </Typography>
+                <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <IconButton>
                     <Facebook />
                   </IconButton>

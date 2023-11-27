@@ -1,6 +1,10 @@
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { getPageTitle } from "../../utils"
+import Service from "../Service"
+import About from "../About"
+import Resume from "../Resume"
+import { Contact } from ".."
 
 const Home = () => {
   const [t] = useTranslation()
@@ -10,6 +14,10 @@ const Home = () => {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>{t("home.title")}</h1>
+      <About />
+      <Service />
+      <Resume />
+      <Contact />
     </>
   )
 }
