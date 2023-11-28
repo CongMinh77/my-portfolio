@@ -9,11 +9,32 @@ const RouterView = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route>
-            <ErrorBlock />
-          </Route>
-        </Routes>
+        {routerChildren && (
+          <Routes>
+            {routerChildren.map(
+              (
+                {
+                  childRoutes,
+                  path,
+                  component: Component,
+                  requiredRoles,
+                  title
+                },
+                index
+              ) => (
+                <Route key={index} path={path}>
+                  <RouteChildrenContext.Provider value={childRoutes}>
+                    <Component></Component>
+                  </RouteChildrenContext.Provider>
+                </Route>
+              )
+            )}
+
+            <Route>
+              <ErrorBlock />
+            </Route>
+          </Routes>
+        )}
       </Suspense>
     </>
   )
