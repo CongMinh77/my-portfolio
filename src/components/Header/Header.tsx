@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Container,
+  CssBaseline,
   IconButton,
   Menu,
   MenuItem,
@@ -25,7 +26,11 @@ import LanguageSelector from "../LanguageSelector"
 const pages = ["home", "service", "resume", "about", "contact"]
 const settings = ["Profile", "Account"]
 
-const Header = () => {
+interface IProps {
+  children?: React.ReactNode
+}
+
+const Header: React.FC<IProps> = (props) => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
 
@@ -50,8 +55,11 @@ const Header = () => {
     setAnchorElUser(null)
   }
 
+  console.debug("header hear")
+
   return (
     <>
+      <CssBaseline />
       <AppBar
         style={{
           backgroundColor: PALETTES_1.BLUE
@@ -178,6 +186,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
+      <Box>{props.children}</Box>
     </>
   )
 }

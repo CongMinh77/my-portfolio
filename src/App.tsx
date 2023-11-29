@@ -1,8 +1,8 @@
 import { Box } from "@mui/material"
 import "./App.css"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Routing from "./routes/routing"
-import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
         sx={{
           paddingY: "70px",
           width: "100%",
-          flexGrow: 1
+          flexGrow: 1,
+          maxWidth: "1440px"
         }}>
         <Routing />
       </Box>

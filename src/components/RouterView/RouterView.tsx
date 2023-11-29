@@ -22,11 +22,16 @@ const RouterView = () => {
                 },
                 index
               ) => (
-                <Route key={index} path={path}>
-                  <RouteChildrenContext.Provider value={childRoutes}>
-                    <Component></Component>
-                  </RouteChildrenContext.Provider>
-                </Route>
+                <Route
+                  key={index}
+                  path={path}
+                  Component={(props) => {
+                    return (
+                      <RouteChildrenContext.Provider value={childRoutes}>
+                        <Component {...props}></Component>
+                      </RouteChildrenContext.Provider>
+                    )
+                  }}></Route>
               )
             )}
 

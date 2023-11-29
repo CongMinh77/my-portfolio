@@ -3,16 +3,6 @@ import ErrorBlock from "../components/ErrorBlock"
 import { About, Contact, Home, Resume, Service } from "../pages"
 
 const Routing = () => {
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     Component: Home
-  //   },
-  //   {
-  //     path: "about",
-  //     Component: About
-  //   }
-  // ])
   return (
     <>
       <Routes>
@@ -23,7 +13,6 @@ const Routing = () => {
         <Route path="/resume" Component={Resume} />
         <Route path="/contact" Component={Contact} />
         <Route path="*" element={<ErrorBlock variant="404" />} />
-        {/* <RouterProvider router={router} /> */}
       </Routes>
     </>
   )

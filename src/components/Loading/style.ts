@@ -1,11 +1,10 @@
-import { Theme } from "@mui/material"
-
-export const style = (theme: Theme) => {
+export const style = () => {
   return {
     loadingCtn: {
       display: 'flex',
       justifyContent: 'center',
-      marginTop: theme.spacing(10)
+      alignItems: 'center',
+      height: '100vh',
     }
   }
 }

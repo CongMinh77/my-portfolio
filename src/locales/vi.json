@@ -44,5 +44,9 @@
     "email-address": "Địa chỉ email",
     "messenger": "Lời nhắn",
     "send-messenger": "Gửi tin nhắn"
+  },
+  "footer": {
+    "information": "Thông tin",
+    "services": "Dịch vụ"
   }
 }

@@ -23,13 +23,14 @@ const About = () => {
           <Box>
             <Typography variant="h4">{t("about.my-bio")}</Typography>
             <Typography style={{ marginTop: 10 }}>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country, in which roasted parts of sentences fly
-              into your mouth.
+              Full-stack developer with nearly 2 years of experience developing
+              web applications including educational applications and internal
+              management software. Proficient in many programming languages
+              including PHP, JavaScript, CSS, Typescript, and some libraries and
+              frameworks such as Laravel, ReactJS, ... And database management
+              systems: Mysql, PostgreSQL In addition, I am a Designer and editor
+              and use quite proficiently with Adobe editing software: Photoshop,
+              Premier Pro, and Illustrator ...
             </Typography>
           </Box>
         </Grid>

@@ -44,5 +44,9 @@
     "email-address": "Email address",
     "messenger": "Messenger",
     "send-messenger": "Send messenger"
+  },
+  "footer": {
+    "information": "Information",
+    "services": "Services"
   }
 }
