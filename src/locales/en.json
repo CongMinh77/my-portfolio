@@ -14,7 +14,9 @@
     "ecommerce": "Ecommerce",
     "development": "Development",
     "design": "Design",
-    "my-bio": "My bio"
+    "my-bio": "My bio",
+    "hire-me": "Hire me",
+    "download-cv": "Download CV"
   },
   "home": {
     "title": "Home"
@@ -47,6 +49,7 @@
   },
   "footer": {
     "information": "Information",
-    "services": "Services"
+    "services": "Services",
+    "contact": "Contact"
   }
 }

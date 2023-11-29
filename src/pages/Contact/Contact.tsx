@@ -53,11 +53,10 @@ const Contact = () => {
           </Box>
           <Box mt={3}>
             <Button
-              style={{
-                borderRadius: "20px",
-                backgroundColor: PALETTES_1.GREEN,
-                color: PALETTES_1.BLACK
+              sx={{
+                borderRadius: 5
               }}
+              color="secondary"
               variant="contained">
               {t("contact.send-messenger")}
             </Button>

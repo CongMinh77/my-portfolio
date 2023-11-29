@@ -8,6 +8,7 @@ export const COLORS = {
   ERROR: "#f50057",
   PRIMARY: "#91B2D1",
   SECONDARY: "#A6D7B9",
+  BACKGROUND_HOME: "#343A4B66"
 }
 
 export const PALETTES_1 = {

@@ -1,8 +1,9 @@
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import { getPageTitle } from "../../utils"
-import { Box, Grid, Typography } from "@mui/material"
+import { Box, Button, Grid, Typography } from "@mui/material"
 import AvatarLogo from "../../assets/avatar.png"
+import { Link } from "react-router-dom"
 
 const About = () => {
   const [t] = useTranslation()
@@ -32,6 +33,27 @@ const About = () => {
               and use quite proficiently with Adobe editing software: Photoshop,
               Premier Pro, and Illustrator ...
             </Typography>
+          </Box>
+          <Box mt={3}>
+            <Button
+              variant="contained"
+              color="secondary"
+              sx={{
+                paddingX: 2,
+                borderRadius: 5,
+                minWidth: 200,
+                marginRight: 2
+              }}>
+              {t("about.hire-me")}
+            </Button>
+            <Link to={"/src/assets/NCMinh-white.png"} target="_blank" download>
+              <Button
+                variant="contained"
+                color="secondary"
+                sx={{ paddingX: 2, borderRadius: 5, minWidth: 200 }}>
+                {t("about.download-cv")}
+              </Button>
+            </Link>
           </Box>
         </Grid>
       </Grid>

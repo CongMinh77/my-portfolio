@@ -18,8 +18,7 @@ function App() {
         sx={{
           paddingY: "70px",
           width: "100%",
-          flexGrow: 1,
-          maxWidth: "1440px"
+          flexGrow: 1
         }}>
         <Routing />
       </Box>

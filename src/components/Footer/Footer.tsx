@@ -20,7 +20,7 @@ const services = [
   }
 ]
 
-const myInfos = [
+const information = [
   {
     title: "About me",
     link: "/about"
@@ -31,21 +31,35 @@ const myInfos = [
   }
 ]
 
+const contact = [
+  {
+    title: "Email",
+    link: "congminh.se7en@gmail.com"
+  },
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/nguyenminhnc/"
+  }
+]
+
 const Footer = () => {
   const [t] = useTranslation()
   return (
     <>
       <footer style={{ width: "100%" }}>
-        <Box sx={{ backgroundColor: PALETTES_1.BLUE, paddingY: 5 }}>
-          <Grid container sx={{ paddingBottom: 2 }}>
+        <Box
+          sx={{
+            backgroundColor: PALETTES_1.BLUE,
+            paddingY: 5
+          }}>
+          <Grid
+            container
+            sx={{ paddingBottom: 2, maxWidth: "1440px", mx: "auto" }}>
             <Grid item xs={3}>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <img src={NCM} alt="Logo" style={{ height: 100 }} />
+                <img src={NCM} alt="Logo" style={{ height: 150 }} />
               </Box>
               <Box px={3}>
-                <Typography variant="subtitle1" sx={{ textAlign: "center" }}>
-                  Connect
-                </Typography>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
                   <IconButton>
                     <Facebook />
@@ -75,14 +89,14 @@ const Footer = () => {
                   flexDirection: "column",
                   paddingTop: 1
                 }}>
-                {myInfos &&
-                  myInfos.map((myInfo, key) => (
-                    <Link key={`${key}-${myInfo.title}`} to={myInfo.link}>
+                {information &&
+                  information.map((info, key) => (
+                    <Link key={`${key}-${info.title}`} to={info.link}>
                       <Typography
                         variant="subtitle1"
                         color={PALETTES_1.BLACK}
                         sx={{ paddingBottom: 1 }}>
-                        {myInfo.title}
+                        {info.title}
                       </Typography>
                     </Link>
                   ))}
@@ -112,6 +126,35 @@ const Footer = () => {
                         color={PALETTES_1.BLACK}
                         sx={{ paddingBottom: 1 }}>
                         {service.title}
+                      </Typography>
+                    </Link>
+                  ))}
+              </Box>
+            </Grid>
+
+            <Grid item xs={3}>
+              <Typography
+                variant="h5"
+                fontWeight={"bold"}
+                sx={{ paddingBottom: 2 }}>
+                {t("footer.contact")}
+              </Typography>
+              <Divider sx={{ width: "15%" }} />
+
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  paddingTop: 1
+                }}>
+                {contact &&
+                  contact.map((myContact, key) => (
+                    <Link key={`${key}-${myContact.title}`} to={myContact.link}>
+                      <Typography
+                        variant="subtitle1"
+                        color={PALETTES_1.BLACK}
+                        sx={{ paddingBottom: 1 }}>
+                        {myContact.title}
                       </Typography>
                     </Link>
                   ))}

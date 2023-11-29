@@ -14,7 +14,9 @@
     "ecommerce": "Thương mại điện tử",
     "development": "Lập trình viên",
     "design": "Thiết kế",
-    "my-bio": "Tiểu sử của tôi"
+    "my-bio": "Tiểu sử của tôi",
+    "hire-me": "Tuyển tôi",
+    "download-cv": "Tải xuống CV"
   },
   "home": {
     "title": "Trang chủ"
@@ -47,6 +49,7 @@
   },
   "footer": {
     "information": "Thông tin",
-    "services": "Dịch vụ"
+    "services": "Dịch vụ",
+    "contact": "Liên hệ"
   }
 }
