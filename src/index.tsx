@@ -34,7 +34,7 @@ root.render(
     <ThemeProvider theme={MyTheme}>
       <CssBaseline />
       <I18nextProvider i18n={i18next}>
-        <BrowserRouter basename="/">
+        <BrowserRouter>
           <ErrorBoundary fallback={ErrorBlock}>
             <Suspense fallback={<LinearProgress />}>
               <App />
