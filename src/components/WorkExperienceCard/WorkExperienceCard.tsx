@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const WorkExperienceCard: React.FC<IProps> = (props) => {
-  const { jobTitle: job, company, date, typeOfWork } = props
+  const { jobTitle, company, date, typeOfWork } = props
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ const WorkExperienceCard: React.FC<IProps> = (props) => {
       }}>
       <Box>
         <Typography variant="h6" style={{ marginBottom: 3 }}>
-          {job}
+          {jobTitle}
         </Typography>
         <Box
           mt={1}

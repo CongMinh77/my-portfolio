@@ -15,11 +15,12 @@
     "development": "Lập trình viên",
     "design": "Thiết kế",
     "my-bio": "Tiểu sử của tôi",
-    "hire-me": "Tuyển tôi",
+    "hire-me": "Thuê tôi",
     "download-cv": "Tải xuống CV"
   },
   "home": {
-    "title": "Trang chủ"
+    "title": "Trang chủ",
+    "introduction": "Tôi là Nguyễn Công Minh"
   },
   "error": {
     "403": "Xin lỗi, bạn không thể truy cập nội dung này",

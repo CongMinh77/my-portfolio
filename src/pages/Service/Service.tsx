@@ -1,5 +1,5 @@
 import {
-  DesktopMacOutlined,
+  CodeRounded,
   DrawOutlined,
   StorefrontOutlined
 } from "@mui/icons-material"
@@ -17,18 +17,18 @@ interface ICard {
 
 const cards: ICard[] = [
   {
-    title: "ecommerce",
-    icon: <StorefrontOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
-  },
-  {
     title: "development",
-    icon: <DesktopMacOutlined fontSize="large" />,
+    icon: <CodeRounded fontSize="large" />,
     description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
   },
   {
     title: "design",
     icon: <DrawOutlined fontSize="large" />,
+    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+  },
+  {
+    title: "ecommerce",
+    icon: <StorefrontOutlined fontSize="large" />,
     description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
   }
 ]

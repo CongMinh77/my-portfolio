@@ -82,14 +82,14 @@ const MyTheme = createTheme({
   palette: {
     mode: "light",
     background: {
-      default: COLORS.WHITE_ED
+      default: COLORS.WHITE_EF
     },
     secondary: {
       main: PALETTES_1.BLACK
     },
     text: {
-      primary: "#222b45",
-      secondary: "#66729c"
+      primary: COLORS.TEXT_PRIMARY,
+      secondary: COLORS.TEXT_SECONDARY
     }
   },
   typography: {

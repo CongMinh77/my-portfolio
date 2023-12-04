@@ -1,5 +1,6 @@
 export const COLORS = {
   WHITE: "#fff",
+  WHITE_EF: "#EFEFEF",
   WHITE_CC: "#CCC",
   WHITE_C8: "#c8c8c8",
   WHITE_ED: "#EDEDED",
@@ -8,7 +9,9 @@ export const COLORS = {
   ERROR: "#f50057",
   PRIMARY: "#91B2D1",
   SECONDARY: "#A6D7B9",
-  BACKGROUND_HOME: "#343A4B66"
+  BACKGROUND_HOME: "#343A4B66",
+  TEXT_PRIMARY: "#222b45",
+  TEXT_SECONDARY: "#66729c"
 }
 
 export const PALETTES_1 = {

@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn } from "@mui/icons-material"
+import { Facebook, Instagram, LinkedIn, YouTube } from "@mui/icons-material"
 import { Box, Divider, Grid, IconButton, Typography } from "@mui/material"
 import { useTranslation } from "react-i18next"
 import NCM from "../../assets/logo.png"
@@ -38,7 +38,25 @@ const contact = [
   },
   {
     title: "Linkedin",
-    link: "https://www.linkedin.com/in/nguyenminhnc/"
+    link: "https://www.linkedin.com/in/minh-nguyencong/"
+  }
+]
+const iconSocial = [
+  {
+    icon: <Facebook />,
+    link: "https://www.facebook.com/ncm.se7en"
+  },
+  {
+    icon: <Instagram />,
+    link: "https://www.instagram.com/cm.se7en.oo/"
+  },
+  {
+    icon: <LinkedIn />,
+    link: "https://www.linkedin.com/in/minh-nguyencong/"
+  },
+  {
+    icon: <YouTube />,
+    link: "https://www.youtube.com/channel/UCMMKhIT65LTvmuBCNtj7KPA"
   }
 ]
 
@@ -61,15 +79,15 @@ const Footer = () => {
               </Box>
               <Box px={3}>
                 <Box sx={{ display: "flex", justifyContent: "center" }}>
-                  <IconButton>
-                    <Facebook />
-                  </IconButton>
-                  <IconButton>
-                    <Instagram />
-                  </IconButton>
-                  <IconButton>
-                    <LinkedIn />
-                  </IconButton>
+                  {iconSocial &&
+                    iconSocial.map((item, key) => (
+                      <Link
+                        key={`${key}-${item.link}`}
+                        to={item.link}
+                        target="_blank">
+                        <IconButton>{item.icon}</IconButton>
+                      </Link>
+                    ))}
                 </Box>
               </Box>
             </Grid>
@@ -166,7 +184,7 @@ const Footer = () => {
 
           <Typography
             variant="subtitle2"
-            sx={{ textAlign: "center", paddingTop: 2 }}>
+            sx={{ textAlign: "center", paddingTop: 4 }}>
             © Copyright All rights reserved | Developer by NCM
           </Typography>
         </Box>

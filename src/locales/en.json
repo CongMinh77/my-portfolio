@@ -19,7 +19,8 @@
     "download-cv": "Download CV"
   },
   "home": {
-    "title": "Home"
+    "title": "Home",
+    "introduction": "I'm Minh Nguyen Cong"
   },
   "error": {
     "403": "Sorry, you cannot access this content",

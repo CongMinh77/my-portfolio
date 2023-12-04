@@ -24,14 +24,16 @@ const About = () => {
           <Box>
             <Typography variant="h4">{t("about.my-bio")}</Typography>
             <Typography style={{ marginTop: 10 }}>
-              Full-stack developer with nearly 2 years of experience developing
-              web applications including educational applications and internal
+              Full-stack developer with 2 years of experience developing web
+              applications including educational applications and internal
               management software. Proficient in many programming languages
               including PHP, JavaScript, CSS, Typescript, and some libraries and
               frameworks such as Laravel, ReactJS, ... And database management
-              systems: Mysql, PostgreSQL In addition, I am a Designer and editor
-              and use quite proficiently with Adobe editing software: Photoshop,
-              Premier Pro, and Illustrator ...
+              systems: Mysql, PostgreSQL.
+              <br />
+              In addition, I am a Designer and editor and use quite proficiently
+              with Adobe editing software: Photoshop, Premier Pro, and
+              Illustrator ...
             </Typography>
           </Box>
           <Box mt={3}>
