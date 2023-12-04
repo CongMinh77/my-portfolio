@@ -48,7 +48,11 @@ const About = () => {
               }}>
               {t("about.hire-me")}
             </Button>
-            <Link to={AvatarLogo} target="_blank" download>
+            <Link
+              to={
+                "https://drive.google.com/file/d/1YlD3hU8qE4K_Y7J9DfZ3sFqDCSfPs6KJ/view?fbclid=IwAR1AgIQrMZsGtTmGQayX94lZUNeYnGx0eKLIJ3Ju3XiN71zWDhgIA5IDpAc"
+              }
+              target="_blank">
               <Button
                 variant="contained"
                 color="secondary"
