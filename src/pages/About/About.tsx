@@ -46,7 +46,7 @@ const About = () => {
               }}>
               {t("about.hire-me")}
             </Button>
-            <Link to={"/src/assets/NCMinh-white.png"} target="_blank" download>
+            <Link to={AvatarLogo} target="_blank" download>
               <Button
                 variant="contained"
                 color="secondary"
