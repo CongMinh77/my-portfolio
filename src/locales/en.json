@@ -16,7 +16,12 @@
     "design": "Design",
     "my-bio": "My bio",
     "hire-me": "Hire me",
-    "download-cv": "Download CV"
+    "download-cv": "Download CV",
+    "description": {
+      "development": "Develop software according to customer requirements, easily, quickly, and modernly using popular languages, easy to maintain software and suitable for the market",
+      "design": "Design",
+      "ecommerce": "Ecommerce"
+    }
   },
   "home": {
     "title": "Home",

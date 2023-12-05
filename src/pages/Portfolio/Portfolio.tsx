@@ -64,18 +64,17 @@ const Portfolio = () => {
       <Box
         sx={{
           width: "100%",
-          height: 500,
-          overflowY: "scroll",
-          borderRadius: "20px"
+          overflowY: "scroll"
         }}>
         <ImageList variant="masonry" cols={3} gap={8} sx={{ marginY: 0 }}>
           {images.map((item) => (
             <ImageListItem key={item.img}>
               <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2`}
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 alt={item.title}
                 loading="lazy"
+                style={{ borderRadius: "16px", padding: "8px" }}
               />
             </ImageListItem>
           ))}

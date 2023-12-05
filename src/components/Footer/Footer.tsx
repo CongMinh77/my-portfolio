@@ -41,6 +41,7 @@ const contact = [
     link: "https://www.linkedin.com/in/minh-nguyencong/"
   }
 ]
+
 const iconSocial = [
   {
     icon: <Facebook />,

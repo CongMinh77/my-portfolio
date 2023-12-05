@@ -16,7 +16,12 @@
     "design": "Thiết kế",
     "my-bio": "Tiểu sử của tôi",
     "hire-me": "Thuê tôi",
-    "download-cv": "Tải xuống CV"
+    "download-cv": "Tải xuống CV",
+    "description": {
+      "development": "Phát triển phần mềm theo yêu cầu của khách, dễ dàng, nhanh chóng, hiện đại sử dụng các loại ngôn ngữ phổ biến dễ dàng bảo trì phần mềm và phù hợp với thị trường",
+      "design": "Thiết kế",
+      "ecommerce": "Thương mại điện tử"
+    }
   },
   "home": {
     "title": "Trang chủ",

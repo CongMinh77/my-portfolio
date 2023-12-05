@@ -1,13 +1,12 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material"
-import { useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { getPageTitle } from "../../utils"
-import { PALETTES_1 } from "../../constants"
 import {
   EmailOutlined,
   PhoneAndroidOutlined,
   PlaceOutlined
 } from "@mui/icons-material"
+import { Box, Button, Grid, TextField, Typography } from "@mui/material"
+import { useEffect } from "react"
+import { useTranslation } from "react-i18next"
+import { getPageTitle } from "../../utils"
 
 const Contact = () => {
   const [t] = useTranslation()

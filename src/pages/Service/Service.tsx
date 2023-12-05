@@ -12,24 +12,20 @@ import { getPageTitle } from "../../utils"
 interface ICard {
   title: string
   icon: React.ReactElement
-  description: string
 }
 
 const cards: ICard[] = [
   {
     title: "development",
-    icon: <CodeRounded fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+    icon: <CodeRounded fontSize="large" />
   },
   {
     title: "design",
-    icon: <DrawOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+    icon: <DrawOutlined fontSize="large" />
   },
   {
     title: "ecommerce",
-    icon: <StorefrontOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+    icon: <StorefrontOutlined fontSize="large" />
   }
 ]
 
@@ -44,11 +40,11 @@ const Service = () => {
       <h1 style={{ textAlign: "center" }}>{t("service.title")}</h1>
       <Grid container rowSpacing={2}>
         {cards.map((card, index) => (
-          <Grid key={`${card.title}-${index}`} item xs={4}>
+          <Grid key={`${card.title}-${index}`} item xs={12 / cards.length}>
             <ServiceCard
               title={t(`about.${card.title}`)}
               icon={card.icon}
-              description={card.description}
+              description={t(`about.description.${card.title}`)}
             />
           </Grid>
         ))}
