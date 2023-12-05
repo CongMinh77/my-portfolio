@@ -73,7 +73,6 @@ const MyTheme = createTheme({
   },
   sidebar: {
     width: 224,
-    bg: "#091a7a",
     fontColor: COLORS.WHITE
   },
   footer: {

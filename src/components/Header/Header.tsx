@@ -33,8 +33,11 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
+  const stateTheme = localStorage.getItem("theme")
 
-  const [toggleTheme, setToggleTheme] = React.useState(true)
+  const [toggleTheme, setToggleTheme] = React.useState<boolean>(
+    stateTheme === "true" ? true : false
+  )
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
@@ -54,8 +57,6 @@ const Header: React.FC<IProps> = (props) => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)
   }
-
-  console.debug("header hear")
 
   return (
     <>
@@ -151,6 +152,7 @@ const Header: React.FC<IProps> = (props) => {
                 checked={toggleTheme}
                 onChange={() => {
                   setToggleTheme(!toggleTheme)
+                  localStorage.setItem("theme", `${!toggleTheme}`)
                 }}
                 name="theme"
                 color="secondary"

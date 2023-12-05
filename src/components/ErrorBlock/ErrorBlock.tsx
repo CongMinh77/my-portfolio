@@ -73,7 +73,6 @@ const DisplayBlock: React.FC<INormalErrorBlockProps> = (props) => {
   const imgBg = getImgBg(variant)
   const title = getDefaultTitle(variant, props.title, t)
 
-  console.debug("imgBg", imgBg)
   document.title = `${variant} - ${title}`
 
   return (
@@ -86,7 +85,7 @@ const DisplayBlock: React.FC<INormalErrorBlockProps> = (props) => {
           <Typography variant="h1" gutterBottom>
             {variant}
           </Typography>
-          <div className="content-desc">
+          <div style={{ marginBottom: 10 }}>
             <Typography variant="h5">{title}</Typography>
             {subtext && <Typography variant="subtitle1">{subtext}</Typography>}
           </div>

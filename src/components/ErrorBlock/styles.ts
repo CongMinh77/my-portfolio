@@ -1,7 +1,7 @@
-import { createStyles } from "@mui/styles"
-import { Theme } from "@mui/material"
 
-export const styles = (theme: Theme) =>
+import { createStyles } from "@mui/styles"
+export const styles = () =>
+
   createStyles({
     root: {
       display: 'flex',
@@ -30,7 +30,6 @@ export const styles = (theme: Theme) =>
         flex: 'auto',
 
         '& .content-desc': {
-          paddingBottom: theme.spacing(2)
         }
       }
     }
