@@ -3,11 +3,12 @@ import {
   DrawOutlined,
   StorefrontOutlined
 } from "@mui/icons-material"
-import { Grid } from "@mui/material"
+import { Box, Grid } from "@mui/material"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import ServiceCard from "../../components/ServiceCard"
 import { getPageTitle } from "../../utils"
+import FinancialManagement from "../FinancialManagement"
 
 interface ICard {
   title: string
@@ -49,6 +50,9 @@ const Service = () => {
           </Grid>
         ))}
       </Grid>
+      <Box>
+        <FinancialManagement />
+      </Box>
     </div>
   )
 }
