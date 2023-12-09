@@ -3,7 +3,7 @@ import {
   DrawOutlined,
   StorefrontOutlined
 } from "@mui/icons-material"
-import { Box, Grid } from "@mui/material"
+import { Grid } from "@mui/material"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
 import ServiceCard from "../../components/ServiceCard"
@@ -13,6 +13,10 @@ import FinancialManagement from "../FinancialManagement"
 interface ICard {
   title: string
   icon: React.ReactElement
+}
+
+interface IProps {
+  showFinancial?: boolean
 }
 
 const cards: ICard[] = [
@@ -30,7 +34,9 @@ const cards: ICard[] = [
   }
 ]
 
-const Service = () => {
+const Service: React.FC<IProps> = (props) => {
+  const { showFinancial = true } = props
+
   const [t] = useTranslation()
   useEffect(() => {
     document.title = getPageTitle(t("service.title"))
@@ -50,9 +56,13 @@ const Service = () => {
           </Grid>
         ))}
       </Grid>
-      <Box>
-        <FinancialManagement />
-      </Box>
+      {showFinancial && (
+        <Grid container rowSpacing={2}>
+          <Grid item xs={12}>
+            <FinancialManagement />
+          </Grid>
+        </Grid>
+      )}
     </div>
   )
 }

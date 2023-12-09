@@ -27,3 +27,9 @@ export const PALETTES_2 = {
   ORANGE: "#BF6459",
   WHITE_GREY: "#C9C9CB"
 }
+
+export const COLORS_OF_YEAR = {
+  2022: "#6667AB",
+  2023: "#BE3455",
+  2024: "#FFBE98"
+}
