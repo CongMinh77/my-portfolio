@@ -31,9 +31,7 @@ export default class ErrorBoundary extends React.Component<IProps, IStates> {
   }
 
   render() {
-    console.log("ErrorBoundary", this.state)
     const { fallback: Component, children } = this.props
-    console.debug("this.state.hasError", this.state.hasError)
     if (this.state.hasError) {
       return <Component error={this.state.error} />
     }

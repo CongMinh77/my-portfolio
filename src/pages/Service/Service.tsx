@@ -1,39 +1,42 @@
 import {
-  DesktopMacOutlined,
+  CodeRounded,
   DrawOutlined,
   StorefrontOutlined
 } from "@mui/icons-material"
 import { Grid } from "@mui/material"
 import { useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import Card from "../../components/Card"
+import ServiceCard from "../../components/ServiceCard"
 import { getPageTitle } from "../../utils"
+import FinancialManagement from "../FinancialManagement"
 
 interface ICard {
   title: string
   icon: React.ReactElement
-  description: string
+}
+
+interface IProps {
+  showFinancial?: boolean
 }
 
 const cards: ICard[] = [
   {
-    title: "ecommerce",
-    icon: <StorefrontOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
-  },
-  {
     title: "development",
-    icon: <DesktopMacOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+    icon: <CodeRounded fontSize="large" />
   },
   {
     title: "design",
-    icon: <DrawOutlined fontSize="large" />,
-    description: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.`
+    icon: <DrawOutlined fontSize="large" />
+  },
+  {
+    title: "ecommerce",
+    icon: <StorefrontOutlined fontSize="large" />
   }
 ]
 
-const Service = () => {
+const Service: React.FC<IProps> = (props) => {
+  const { showFinancial = true } = props
+
   const [t] = useTranslation()
   useEffect(() => {
     document.title = getPageTitle(t("service.title"))
@@ -42,17 +45,24 @@ const Service = () => {
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>{t("service.title")}</h1>
-      <Grid container>
-        {cards.map((card) => (
-          <Grid key={card.title} item xs={4}>
-            <Card
+      <Grid container rowSpacing={2}>
+        {cards.map((card, index) => (
+          <Grid key={`${card.title}-${index}`} item xs={12 / cards.length}>
+            <ServiceCard
               title={t(`about.${card.title}`)}
               icon={card.icon}
-              description={card.description}
+              description={t(`about.description.${card.title}`)}
             />
           </Grid>
         ))}
       </Grid>
+      {showFinancial && (
+        <Grid container rowSpacing={2}>
+          <Grid item xs={12}>
+            <FinancialManagement />
+          </Grid>
+        </Grid>
+      )}
     </div>
   )
 }

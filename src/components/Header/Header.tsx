@@ -5,9 +5,11 @@ import {
   Box,
   Button,
   Container,
+  CssBaseline,
   IconButton,
   Menu,
   MenuItem,
+  Switch,
   Toolbar,
   Tooltip,
   Typography
@@ -17,16 +19,25 @@ import { useTranslation } from "react-i18next"
 import { Link, NavLink } from "react-router-dom"
 import SignNCM from "../../assets/NCMinh-white.png"
 import AvatarLogo from "../../assets/avatar.png"
-import NCM from "../../assets/logo-white.png"
+import NCM from "../../assets/logo.png"
+import { PALETTES_1 } from "../../constants"
 import LanguageSelector from "../LanguageSelector"
 
-const pages = ["home", "service", "resume", "about", "blog", "contact"]
+const pages = ["home", "service", "resume", "about", "contact"]
 const settings = ["Profile", "Account"]
 
-const Header = () => {
+interface IProps {
+  children?: React.ReactNode
+}
+
+const Header: React.FC<IProps> = (props) => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
+  const stateTheme = localStorage.getItem("theme")
 
+  const [toggleTheme, setToggleTheme] = React.useState<boolean>(
+    stateTheme === "true" ? true : false
+  )
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
@@ -49,10 +60,16 @@ const Header = () => {
 
   return (
     <>
-      <AppBar>
+      <CssBaseline />
+      <AppBar
+        style={{
+          backgroundColor: PALETTES_1.BLUE
+        }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <img alt="Logo" style={{ height: 50 }} src={NCM} />
+            <Link to="/">
+              <img alt="Logo" style={{ height: 50 }} src={NCM} />
+            </Link>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -107,19 +124,39 @@ const Header = () => {
                 display: { xs: "none", md: "flex" },
                 justifyContent: "space-around"
               }}>
-              {pages.map((page) => (
-                <NavLink key={page} to={`/${page}`}>
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}>
-                    {t(`nav.${page}`)}
-                  </Button>
-                </NavLink>
-              ))}
+              <Box
+                sx={{
+                  minWidth: "50vw",
+                  display: { xs: "none", md: "flex" },
+                  justifyContent: "space-around"
+                }}>
+                {pages.map((page) => (
+                  <NavLink key={page} to={`/${page}`}>
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        my: 2,
+                        color: PALETTES_1.BLACK,
+                        display: "block"
+                      }}>
+                      {t(`nav.${page}`)}
+                    </Button>
+                  </NavLink>
+                ))}
+              </Box>
             </Box>
 
             <Box sx={{ flexGrow: 0, display: "flex" }}>
+              <Switch
+                checked={toggleTheme}
+                onChange={() => {
+                  setToggleTheme(!toggleTheme)
+                  localStorage.setItem("theme", `${!toggleTheme}`)
+                }}
+                name="theme"
+                color="secondary"
+              />
               <LanguageSelector />
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -151,6 +188,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
+      <Box>{props.children}</Box>
     </>
   )
 }

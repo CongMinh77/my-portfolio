@@ -1,7 +1,35 @@
 export const COLORS = {
   WHITE: "#fff",
+  WHITE_EF: "#EFEFEF",
   WHITE_CC: "#CCC",
+  WHITE_C8: "#c8c8c8",
   WHITE_ED: "#EDEDED",
   HEADER_COLOR: "#222b45",
-  
+  SUCCESS: "#007E33",
+  ERROR: "#f50057",
+  PRIMARY: "#91B2D1",
+  SECONDARY: "#A6D7B9",
+  BACKGROUND_HOME: "#343A4B66",
+  TEXT_PRIMARY: "#222b45",
+  TEXT_SECONDARY: "#66729c"
+}
+
+export const PALETTES_1 = {
+  BLUE: "#91B2D1",
+  BLACK: "#010103",
+  GREEN: "#A6D7B9",
+  YELLOW: "#FBEE9E"
+}
+
+export const PALETTES_2 = {
+  BLACK: "#010103",
+  GREY: "#424244",
+  ORANGE: "#BF6459",
+  WHITE_GREY: "#C9C9CB"
+}
+
+export const COLORS_OF_YEAR = {
+  2022: "#6667AB",
+  2023: "#BE3455",
+  2024: "#FFBE98"
 }

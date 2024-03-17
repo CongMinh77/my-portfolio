@@ -13,10 +13,19 @@
     "title": "Về tôi",
     "ecommerce": "Thương mại điện tử",
     "development": "Lập trình viên",
-    "design": "Thiết kế"
+    "design": "Thiết kế",
+    "my-bio": "Tiểu sử của tôi",
+    "hire-me": "Thuê tôi",
+    "download-cv": "Tải xuống CV",
+    "description": {
+      "development": "Phát triển phần mềm theo yêu cầu của khách, dễ dàng, nhanh chóng, hiện đại sử dụng các loại ngôn ngữ phổ biến dễ dàng bảo trì phần mềm và phù hợp với thị trường",
+      "design": "Thiết kế",
+      "ecommerce": "Thương mại điện tử"
+    }
   },
   "home": {
-    "title": "Trang chủ"
+    "title": "Trang chủ",
+    "introduction": "Tôi là Nguyễn Công Minh"
   },
   "error": {
     "403": "Xin lỗi, bạn không thể truy cập nội dung này",
@@ -29,5 +38,24 @@
   },
   "service": {
     "title": "Dịch vụ"
+  },
+  "resume": {
+    "title": "Bản tóm tắt",
+    "work-experience": "Kinh nghiệm làm việc",
+    "education": "Học vấn"
+  },
+  "contact": {
+    "title": "Liên hệ với tôi",
+    "info": "Thông tin liên lạc",
+    "first-name": "Tên",
+    "last-name": "Họ",
+    "email-address": "Địa chỉ email",
+    "messenger": "Lời nhắn",
+    "send-messenger": "Gửi tin nhắn"
+  },
+  "footer": {
+    "information": "Thông tin",
+    "services": "Dịch vụ",
+    "contact": "Liên hệ"
   }
 }

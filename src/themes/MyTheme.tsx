@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles"
-import { COLORS } from "../constants"
+import { COLORS, PALETTES_1 } from "../constants"
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -65,7 +65,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-export default createTheme({
+const MyTheme = createTheme({
   header: {
     height: 60,
     bg: COLORS.WHITE,
@@ -73,29 +73,30 @@ export default createTheme({
   },
   sidebar: {
     width: 224,
-    bg: "#091a7a",
     fontColor: COLORS.WHITE
   },
   footer: {
     height: 150
   },
   palette: {
+    mode: "light",
     background: {
-      default: COLORS.WHITE_ED
+      default: COLORS.WHITE_EF
     },
     secondary: {
-      main: "#F37029"
+      main: PALETTES_1.BLACK
     },
     text: {
-      primary: "#222b45",
-      secondary: "#66729c"
+      primary: COLORS.TEXT_PRIMARY,
+      secondary: COLORS.TEXT_SECONDARY
     }
   },
   typography: {
-    fontFamily: '"Quicksand", sans-serif',
-    fontSize: 12,
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
+    fontFamily: `"Quicksand", "sans-serif"`,
+    fontSize: 14,
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
     fontWeightBold: 700
   },
   classroomSidebar: {
@@ -103,14 +104,16 @@ export default createTheme({
   },
   customs: {
     color: {
-      success: "#007E33",
-      danger: "#f50057",
+      success: COLORS.SUCCESS,
+      danger: COLORS.ERROR,
       border: {
-        main: "#c8c8c8"
+        main: COLORS.WHITE_C8
       }
     },
     button: {
-      minWidth: 150
+      minWidth: 50
     }
   }
 })
+
+export default MyTheme

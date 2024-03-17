@@ -8,7 +8,7 @@ interface IProps {
   description: string
 }
 
-const Card: React.FC<IProps> = (props) => {
+const ServiceCard: React.FC<IProps> = (props) => {
   const { title, icon, description } = props
   return (
     <Box
@@ -20,7 +20,8 @@ const Card: React.FC<IProps> = (props) => {
         border: `1px solid ${COLORS.WHITE_CC}`,
         borderRadius: "5px",
         marginX: 2,
-        padding: 2
+        padding: 2,
+        minHeight: "180px"
       }}>
       {icon}
       <Typography variant="h6" style={{ marginBottom: 3 }}>
@@ -33,4 +34,4 @@ const Card: React.FC<IProps> = (props) => {
   )
 }
 
-export default Card
+export default ServiceCard

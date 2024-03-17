@@ -13,10 +13,19 @@
     "title": "About",
     "ecommerce": "Ecommerce",
     "development": "Development",
-    "design": "Design"
+    "design": "Design",
+    "my-bio": "My bio",
+    "hire-me": "Hire me",
+    "download-cv": "Download CV",
+    "description": {
+      "development": "Develop software according to customer requirements, easily, quickly, and modernly using popular languages, easy to maintain software and suitable for the market",
+      "design": "Design",
+      "ecommerce": "Ecommerce"
+    }
   },
   "home": {
-    "title": "Home"
+    "title": "Home",
+    "introduction": "I'm Minh Nguyen Cong"
   },
   "error": {
     "403": "Sorry, you cannot access this content",
@@ -29,5 +38,24 @@
   },
   "service": {
     "title": "Service"
+  },
+  "resume": {
+    "title": "Resume",
+    "work-experience": "Work experience",
+    "education": "Education"
+  },
+  "contact": {
+    "title": "Contact me",
+    "info": "Contact info",
+    "first-name": "First name",
+    "last-name": "Last name",
+    "email-address": "Email address",
+    "messenger": "Messenger",
+    "send-messenger": "Send messenger"
+  },
+  "footer": {
+    "information": "Information",
+    "services": "Services",
+    "contact": "Contact"
   }
 }
