@@ -13,6 +13,7 @@ import en from "./locales/en.json"
 import vi from "./locales/vi.json"
 import reportWebVitals from "./reportWebVitals"
 import MyTheme from "./themes/MyTheme"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const locale = localStorage.getItem("locale")
 i18next.init({
@@ -38,6 +39,7 @@ root.render(
           <ErrorBoundary fallback={ErrorBlock}>
             <Suspense fallback={<LinearProgress />}>
               <App />
+              <SpeedInsights />
             </Suspense>
           </ErrorBoundary>
         </BrowserRouter>
