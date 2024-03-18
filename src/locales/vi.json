@@ -37,7 +37,13 @@
     "go-back-home": "Trở về trang chủ"
   },
   "service": {
-    "title": "Dịch vụ"
+    "title": "Dịch vụ",
+    "necessary": "Cần thiết",
+    "self-development": "Phát triển bản thân",
+    "investment": "Đầu tư",
+    "enjoys": "Thú vui cá nhân",
+    "gifts": "Quà tặng",
+    "your_salary": "Thu nhập của bạn"
   },
   "resume": {
     "title": "Bản tóm tắt",
@@ -57,5 +63,8 @@
     "information": "Thông tin",
     "services": "Dịch vụ",
     "contact": "Liên hệ"
+  },
+  "sevice": {
+    "savings": "Tiết kiệm"
   }
 }

@@ -1,5 +1,6 @@
 import { CssBaseline, LinearProgress } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import i18next from "i18next"
 import React, { Suspense } from "react"
 import ReactDOM from "react-dom/client"
@@ -8,12 +9,12 @@ import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import ErrorBlock from "./components/ErrorBlock"
 import ErrorBoundary from "./components/ErrorBoundary"
+import ScrollToTop from "./components/ScrollToTop"
 import "./index.css"
 import en from "./locales/en.json"
 import vi from "./locales/vi.json"
 import reportWebVitals from "./reportWebVitals"
 import MyTheme from "./themes/MyTheme"
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const locale = localStorage.getItem("locale")
 i18next.init({
@@ -38,6 +39,7 @@ root.render(
         <BrowserRouter>
           <ErrorBoundary fallback={ErrorBlock}>
             <Suspense fallback={<LinearProgress />}>
+              <ScrollToTop />
               <App />
               <SpeedInsights />
             </Suspense>

@@ -11,7 +11,6 @@ import {
   MenuItem,
   Switch,
   Toolbar,
-  Tooltip,
   Typography
 } from "@mui/material"
 import React, { useEffect } from "react"
@@ -24,7 +23,6 @@ import { PALETTES_1 } from "../../constants"
 import LanguageSelector from "../LanguageSelector"
 
 const pages = ["home", "service", "resume", "about", "contact"]
-const settings = ["Profile", "Account"]
 
 interface IProps {
   children?: React.ReactNode
@@ -39,23 +37,13 @@ const Header: React.FC<IProps> = (props) => {
     stateTheme === "true" ? true : false
   )
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  )
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget)
   }
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget)
-  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null)
-  }
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null)
   }
 
   return (
@@ -158,32 +146,9 @@ const Header: React.FC<IProps> = (props) => {
                 color="secondary"
               />
               <LanguageSelector />
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="MinhNC" src={AvatarLogo} />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}>
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
+              <IconButton sx={{ p: 0 }}>
+                <Avatar alt="MinhNC" src={AvatarLogo} />
+              </IconButton>
             </Box>
           </Toolbar>
         </Container>

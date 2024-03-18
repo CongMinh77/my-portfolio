@@ -37,7 +37,13 @@
     "go-back-home": "Go to home page"
   },
   "service": {
-    "title": "Service"
+    "title": "Service",
+    "necessary": "Necessary",
+    "self-development": "Self-development",
+    "investment": "Investment",
+    "enjoys": "Enjoys",
+    "gifts": "Gifts",
+    "your_salary": "Your Salary"
   },
   "resume": {
     "title": "Resume",
@@ -57,5 +63,8 @@
     "information": "Information",
     "services": "Services",
     "contact": "Contact"
+  },
+  "sevice": {
+    "savings": "Savings"
   }
 }
