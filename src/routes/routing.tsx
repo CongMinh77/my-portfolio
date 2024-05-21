@@ -4,17 +4,15 @@ import { About, Contact, Home, Resume, Service } from "../pages"
 
 const Routing = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<ErrorBlock variant="404" />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" Component={Home} />
+      <Route path="/home" Component={Home} />
+      <Route path="/about" Component={About} />
+      <Route path="/service" Component={Service} />
+      <Route path="/resume" Component={Resume} />
+      <Route path="/contact" Component={Contact} />
+      <Route path="*" element={<ErrorBlock variant="404" />} />
+    </Routes>
   )
 }
 
