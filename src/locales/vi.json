@@ -66,5 +66,10 @@
   },
   "sevice": {
     "savings": "Tiết kiệm"
-  }
+  },
+  "my_portfolio": {
+    "title": "Portfolio của tôi"
+  },
+  "about_me": "Về tôi",
+  "contact_me": "Liên hệ với tôi"
 }

@@ -10,5 +10,6 @@
   "space-before-function-paren": ["error", "never"],
   "bracketSpacing": true,
   "bracketSameLine": true,
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "singleQuote": true
 }
