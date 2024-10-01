@@ -2,13 +2,14 @@ import {
   CodeRounded,
   DrawOutlined,
   StorefrontOutlined
-} from "@mui/icons-material"
-import { Grid } from "@mui/material"
-import { useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import ServiceCard from "../../components/ServiceCard"
-import { getPageTitle } from "../../utils"
-import FinancialManagement from "../FinancialManagement"
+} from '@mui/icons-material'
+import { Grid } from '@mui/material'
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import ServiceCard from '../../components/ServiceCard'
+import { getPageTitle } from '../../utils'
+import FinancialManagement from '../FinancialManagement'
+import BigSmallGame from '../../widgets/BigSmallGame'
 
 interface ICard {
   title: string
@@ -21,15 +22,15 @@ interface IProps {
 
 const cards: ICard[] = [
   {
-    title: "development",
+    title: 'development',
     icon: <CodeRounded fontSize="large" />
   },
   {
-    title: "design",
+    title: 'design',
     icon: <DrawOutlined fontSize="large" />
   },
   {
-    title: "ecommerce",
+    title: 'ecommerce',
     icon: <StorefrontOutlined fontSize="large" />
   }
 ]
@@ -39,12 +40,12 @@ const Service: React.FC<IProps> = (props) => {
 
   const [t] = useTranslation()
   useEffect(() => {
-    document.title = getPageTitle(t("service.title"))
+    document.title = getPageTitle(t('service.title'))
   }, [t])
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>{t("service.title")}</h1>
+      <h1 style={{ textAlign: 'center' }}>{t('service.title')}</h1>
       <Grid container rowSpacing={2}>
         {cards.map((card, index) => (
           <Grid key={`${card.title}-${index}`} item xs={12 / cards.length}>
@@ -63,6 +64,7 @@ const Service: React.FC<IProps> = (props) => {
           </Grid>
         </Grid>
       )}
+      {<BigSmallGame />}
     </div>
   )
 }

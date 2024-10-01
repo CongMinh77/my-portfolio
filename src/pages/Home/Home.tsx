@@ -9,8 +9,10 @@ import Contact from '../Contact'
 import Portfolio from '../Portfolio'
 import Resume from '../Resume'
 import Service from '../Service'
+import { useStyles } from './styles'
 
 const Home = () => {
+  const classes = useStyles()
   const [t] = useTranslation()
   useEffect(() => {
     document.title = getPageTitle(t('home.title'))
@@ -27,15 +29,7 @@ const Home = () => {
           alt="Background"
           loading="lazy"
         />
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            background: COLORS.BACKGROUND_HOME,
-            width: '100%'
-          }}>
+        <Box className={classes.wrapTypography}>
           <Typography
             variant="h4"
             fontWeight="bold"
