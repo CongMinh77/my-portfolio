@@ -18,6 +18,7 @@ interface ICard {
 
 interface IProps {
   showFinancial?: boolean
+  showGame?: boolean
 }
 
 const cards: ICard[] = [
@@ -36,7 +37,7 @@ const cards: ICard[] = [
 ]
 
 const Service: React.FC<IProps> = (props) => {
-  const { showFinancial = true } = props
+  const { showFinancial = true, showGame = true } = props
 
   const [t] = useTranslation()
   useEffect(() => {
@@ -64,7 +65,7 @@ const Service: React.FC<IProps> = (props) => {
           </Grid>
         </Grid>
       )}
-      {<BigSmallGame />}
+      {showGame && <BigSmallGame />}
     </div>
   )
 }

@@ -44,7 +44,7 @@ const Home = () => {
       <Box sx={{ maxWidth: '1440px', margin: '0 auto' }}>
         <Portfolio />
         <About />
-        <Service showFinancial={false} />
+        <Service showFinancial={false} showGame={false} />
         <Resume />
         <Contact />
       </Box>

@@ -18,12 +18,13 @@ export default function BigSmallGame({}: IProps) {
   const handleRandomDice = (typeResult?: number) => {
     const number = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
     if (typeResult === TYPE_RESULT_ROLL.SMALL) {
-      const lastNumber = Math.floor(Math.random() * 3) + 1
-      setResults([
-        { dice: (Math.floor(Math.random() * 3) + 1) as number },
-        { dice: (Math.floor(Math.random() * 3) + 1) as number },
-        { dice: (Math.floor(Math.random() * 3) + 1) as number }
-      ])
+      const lastNumber = Math.floor(Math.random() * 6) + 1
+      if (lastNumber)
+        setResults([
+          { dice: (Math.floor(Math.random() * 3) + 1) as number },
+          { dice: (Math.floor(Math.random() * 3) + 1) as number },
+          { dice: (Math.floor(Math.random() * 3) + 1) as number }
+        ])
     } else if (typeResult === TYPE_RESULT_ROLL.BIG) {
       setResults([
         { dice: (Math.floor(Math.random() * 6) + 1) as number },
