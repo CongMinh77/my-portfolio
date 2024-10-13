@@ -21,7 +21,9 @@
       "development": "Develop software according to customer requirements, easily, quickly, and modernly using popular languages, easy to maintain software and suitable for the market",
       "design": "Design",
       "ecommerce": "Ecommerce"
-    }
+    },
+    "my-summary": "Fullstack Developer with nearly 3 years of experience in designing and developing both front-end and back-end solutions. Experienced in digital transformation, particularly in the fields of education, logistics, and business operations. Skilled in building scalable web applications, integrating third-party APIs, and optimizing performance for complex systems. Proficient in Laravel and React frameworks, with experience in managing databases using MySQL and Firebase. Experienced in handling server environments, especially Linux. Capable of collaborating with diverse teams to deliver high-quality software solutions that drive efficiency and innovation across various industries.",
+    "my-design": "In addition, I am a Designer and editor and use quite proficiently with Adobe editing software: Photoshop, Premier Pro, and Illustrator ..."
   },
   "home": {
     "title": "Home",

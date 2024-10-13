@@ -1,6 +1,8 @@
 import { Box, Button, Typography } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { TYPE_RESULT_ROLL } from '../../constants/commonVariables'
+import f1 from '../../assets/AllFaceCube/t1l2r3.svg'
+import f2 from '../../assets/AllFaceCube/t2l3r1.svg'
 
 type IProps = {}
 
@@ -52,6 +54,38 @@ export default function BigSmallGame({}: IProps) {
       {results.map((item: IPropResults) => (
         <Typography>{item.dice}</Typography>
       ))}
+      <Box sx={{ position: 'relative', height: '250px' }}>
+        <img
+          src={f1}
+          alt="f1-cube"
+          style={{
+            position: 'absolute',
+            left: '35px',
+            top: '0px',
+            width: '250px'
+          }}
+        />
+        <img
+          src={f2}
+          alt="f1-cube"
+          style={{
+            position: 'absolute',
+            left: '70px',
+            top: '25px',
+            width: '250px'
+          }}
+        />
+        <img
+          src={f2}
+          alt="f1-cube"
+          style={{
+            position: 'absolute',
+            left: '0',
+            top: '25px',
+            width: '250px'
+          }}
+        />
+      </Box>
     </Box>
   )
 }

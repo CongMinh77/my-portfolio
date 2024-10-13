@@ -21,7 +21,9 @@
       "development": "Phát triển phần mềm theo yêu cầu của khách, dễ dàng, nhanh chóng, hiện đại sử dụng các loại ngôn ngữ phổ biến dễ dàng bảo trì phần mềm và phù hợp với thị trường",
       "design": "Thiết kế",
       "ecommerce": "Thương mại điện tử"
-    }
+    },
+    "my-summary": "Lập trình viên Fullstack với gần 3 năm kinh nghiệm trong việc thiết kế và phát triển các giải pháp front-end và back-end. Có kinh nghiệm trong chuyển đổi số, đặc biệt trong các lĩnh vực giáo dục, logistics và hoạt động kinh doanh. Thành thạo trong việc xây dựng các ứng dụng web có khả năng mở rộng, tích hợp API từ bên thứ ba, và tối ưu hóa hiệu suất cho các hệ thống phức tạp. Sử dụng thành thạo các framework Laravel và React, có kinh nghiệm quản lý cơ sở dữ liệu bằng MySQL và Firebase. Có kinh nghiệm làm việc với môi trường máy chủ, đặc biệt là Linux. Có khả năng hợp tác với các đội ngũ đa dạng để cung cấp các giải pháp phần mềm chất lượng cao, giúp nâng cao hiệu quả và đổi mới trong nhiều ngành công nghiệp.",
+    "my-design": "Ngoài ra, tôi là một nhà thiết kế và biên tập viên và sử dụng khá thành thạo với phần mềm chỉnh sửa Adobe: Photoshop, Premier Pro và Illustrator"
   },
   "home": {
     "title": "Trang chủ",
