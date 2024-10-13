@@ -3,6 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { TYPE_RESULT_ROLL } from '../../constants/commonVariables'
 import f1 from '../../assets/AllFaceCube/t1l2r3.svg'
 import f2 from '../../assets/AllFaceCube/t2l3r1.svg'
+import f3 from '../../assets/AllFaceCube/t3l2r6.svg'
+import f4 from '../../assets/AllFaceCube/t4l2r1.svg'
+import f5 from '../../assets/AllFaceCube/t5l1r3.svg'
+import f6 from '../../assets/AllFaceCube/t6l3r2.svg'
 
 type IProps = {}
 
@@ -42,6 +46,56 @@ export default function BigSmallGame({}: IProps) {
     }
   }
 
+  console.debug('results', results)
+
+  const renderImg = (id: number | string) => {
+    switch (id) {
+      case 1:
+        return f1
+      case 2:
+        return f2
+      case 3:
+        return f3
+      case 4:
+        return f4
+      case 5:
+        return f5
+      case 6:
+        return f6
+      default:
+        return f1
+    }
+  }
+
+  const renderStyleCube = (index: number) => {
+    switch (index) {
+      case 1:
+        return {
+          position: 'absolute',
+          left: '70px',
+          top: '25px',
+          width: '250px',
+          transition: 'all 1s ease-out'
+        }
+      case 2:
+        return {
+          position: 'absolute',
+          left: '0',
+          top: '25px',
+          width: '250px',
+          transition: 'all 1s ease-out'
+        }
+      default:
+        return {
+          position: 'absolute',
+          left: '35px',
+          top: '0px',
+          width: '250px',
+          transition: 'all 1s ease-out'
+        }
+    }
+  }
+
   return (
     <Box p={2}>
       <Button onClick={() => handleRandomDice()}>Random dice</Button>
@@ -51,40 +105,23 @@ export default function BigSmallGame({}: IProps) {
       <Button onClick={() => handleRandomDice(TYPE_RESULT_ROLL.BIG)}>
         Big result
       </Button>
-      {results.map((item: IPropResults) => (
-        <Typography>{item.dice}</Typography>
-      ))}
-      <Box sx={{ position: 'relative', height: '250px' }}>
-        <img
-          src={f1}
-          alt="f1-cube"
-          style={{
-            position: 'absolute',
-            left: '35px',
-            top: '0px',
-            width: '250px'
-          }}
-        />
-        <img
-          src={f2}
-          alt="f1-cube"
-          style={{
-            position: 'absolute',
-            left: '70px',
-            top: '25px',
-            width: '250px'
-          }}
-        />
-        <img
-          src={f2}
-          alt="f1-cube"
-          style={{
-            position: 'absolute',
-            left: '0',
-            top: '25px',
-            width: '250px'
-          }}
-        />
+      <Box
+        sx={{
+          position: 'relative',
+          height: '250px',
+          transition: 'all 1s ease-out'
+        }}>
+        {results.map((item: IPropResults, index) => {
+          return (
+            <>
+              <img
+                src={renderImg(item.dice)}
+                alt={`f${item.dice}-cube`}
+                style={renderStyleCube(index) as any}
+              />
+            </>
+          )
+        })}
       </Box>
     </Box>
   )
