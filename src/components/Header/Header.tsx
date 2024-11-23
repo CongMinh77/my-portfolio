@@ -1,4 +1,4 @@
-import MenuIcon from "@mui/icons-material/Menu"
+import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
   Avatar,
@@ -12,17 +12,17 @@ import {
   Switch,
   Toolbar,
   Typography
-} from "@mui/material"
-import React, { useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { Link, NavLink } from "react-router-dom"
-import SignNCM from "../../assets/NCMinh-white.png"
-import AvatarLogo from "../../assets/avatar.png"
-import NCM from "../../assets/logo.png"
-import { PALETTES_1 } from "../../constants"
-import LanguageSelector from "../LanguageSelector"
+} from '@mui/material'
+import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link, NavLink } from 'react-router-dom'
+import SignNCM from '../../assets/NCMinh-white.png'
+import AvatarLogo from '../../assets/avatar.png'
+import NCM from '../../assets/logo.png'
+import { PALETTES_1 } from '../../constants'
+import LanguageSelector from '../LanguageSelector'
 
-const pages = ["home", "service", "resume", "about", "contact"]
+const pages = ['home', 'service', 'resume', 'about', 'contact']
 
 interface IProps {
   children?: React.ReactNode
@@ -31,10 +31,10 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   useEffect(() => {}, [])
   const [t] = useTranslation()
-  const stateTheme = localStorage.getItem("theme")
+  const stateTheme = localStorage.getItem('theme')
 
   const [toggleTheme, setToggleTheme] = React.useState<boolean>(
-    stateTheme === "true" ? true : false
+    stateTheme === 'true' ? true : false
   )
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
@@ -59,7 +59,7 @@ const Header: React.FC<IProps> = (props) => {
               <img alt="Logo" style={{ height: 50 }} src={NCM} />
             </Link>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -73,18 +73,18 @@ const Header: React.FC<IProps> = (props) => {
                 id="menu-appbar"
                 anchorEl={anchorElNav}
                 anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left"
+                  vertical: 'bottom',
+                  horizontal: 'left'
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left"
+                  vertical: 'top',
+                  horizontal: 'left'
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
                 sx={{
-                  display: { xs: "block", md: "none" }
+                  display: { xs: 'block', md: 'none' }
                 }}>
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -99,24 +99,24 @@ const Header: React.FC<IProps> = (props) => {
             <Box
               sx={{
                 mr: 2,
-                display: { xs: "flex", md: "none" },
+                display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
-                letterSpacing: ".3rem",
-                color: "inherit"
+                letterSpacing: '.3rem',
+                color: 'inherit'
               }}>
               <img alt="Logo" style={{ height: 50 }} src={SignNCM} />
             </Box>
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", md: "flex" },
-                justifyContent: "space-around"
+                display: { xs: 'none', md: 'flex' },
+                justifyContent: 'space-around'
               }}>
               <Box
                 sx={{
-                  minWidth: "50vw",
-                  display: { xs: "none", md: "flex" },
-                  justifyContent: "space-around"
+                  minWidth: '50vw',
+                  display: { xs: 'none', md: 'flex' },
+                  justifyContent: 'space-around'
                 }}>
                 {pages.map((page) => (
                   <NavLink key={page} to={`/${page}`}>
@@ -126,7 +126,7 @@ const Header: React.FC<IProps> = (props) => {
                       sx={{
                         my: 2,
                         color: PALETTES_1.BLACK,
-                        display: "block"
+                        display: 'block'
                       }}>
                       {t(`nav.${page}`)}
                     </Button>
@@ -135,8 +135,8 @@ const Header: React.FC<IProps> = (props) => {
               </Box>
             </Box>
 
-            <Box sx={{ flexGrow: 0, display: "flex" }}>
-              <Switch
+            <Box sx={{ flexGrow: 0, display: 'flex' }}>
+              {/* <Switch
                 checked={toggleTheme}
                 onChange={() => {
                   setToggleTheme(!toggleTheme)
@@ -144,7 +144,7 @@ const Header: React.FC<IProps> = (props) => {
                 }}
                 name="theme"
                 color="secondary"
-              />
+              /> */}
               <LanguageSelector />
               <IconButton sx={{ p: 0 }}>
                 <Avatar alt="MinhNC" src={AvatarLogo} />

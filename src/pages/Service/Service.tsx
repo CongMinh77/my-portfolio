@@ -29,10 +29,6 @@ const cards: ICard[] = [
   {
     title: 'design',
     icon: <DrawOutlined fontSize="large" />
-  },
-  {
-    title: 'ecommerce',
-    icon: <StorefrontOutlined fontSize="large" />
   }
 ]
 

@@ -30,6 +30,7 @@ const About = () => {
             <Typography sx={{ marginTop: 2 }}>
               {t('about.my-summary')}
               <br />
+              <br />
               {t('about.my-design')}
             </Typography>
           </Box>
