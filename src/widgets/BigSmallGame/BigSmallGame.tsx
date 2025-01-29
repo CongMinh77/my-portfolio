@@ -1,12 +1,13 @@
-import { Box, Button, Typography } from '@mui/material'
-import React, { useEffect, useState } from 'react'
-import { TYPE_RESULT_ROLL } from '../../constants/commonVariables'
+import { Box, Button } from '@mui/material'
+import { TYPE_RESULT_ROLL } from 'configs'
+import { useState } from 'react'
 import f1 from '../../assets/AllFaceCube/t1l2r3.svg'
 import f2 from '../../assets/AllFaceCube/t2l3r1.svg'
 import f3 from '../../assets/AllFaceCube/t3l2r6.svg'
 import f4 from '../../assets/AllFaceCube/t4l2r1.svg'
 import f5 from '../../assets/AllFaceCube/t5l1r3.svg'
 import f6 from '../../assets/AllFaceCube/t6l3r2.svg'
+import { useTranslation } from 'react-i18next'
 
 type IProps = {}
 
@@ -14,7 +15,8 @@ type IPropResults = {
   dice: number
 }
 
-export default function BigSmallGame({}: IProps) {
+export default function BigSmallGame() {
+  const { t } = useTranslation()
   const [results, setResults] = useState<IPropResults[]>([
     { dice: 0 },
     { dice: 0 },
@@ -98,12 +100,12 @@ export default function BigSmallGame({}: IProps) {
 
   return (
     <Box p={2}>
-      <Button onClick={() => handleRandomDice()}>Random dice</Button>
+      <Button onClick={() => handleRandomDice()}>{t('random-dice')}</Button>
       <Button onClick={() => handleRandomDice(TYPE_RESULT_ROLL.SMALL)}>
-        Small result
+        {t('small-result')}
       </Button>
       <Button onClick={() => handleRandomDice(TYPE_RESULT_ROLL.BIG)}>
-        Big result
+        {t('big-result')}
       </Button>
       <Box
         sx={{

@@ -1,7 +1,7 @@
-import { Box, Chip, Typography } from "@mui/material"
-import React from "react"
-import { COLORS } from "../../constants"
-import { BusinessOutlined, CalendarMonthOutlined } from "@mui/icons-material"
+import { Box, Chip, Typography } from '@mui/material'
+import React from 'react'
+import { COLORS } from '../../configs'
+import { BusinessOutlined, CalendarMonthOutlined } from '@mui/icons-material'
 
 interface IProps {
   jobTitle: string
@@ -15,12 +15,12 @@ const WorkExperienceCard: React.FC<IProps> = (props) => {
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        maxWidth: "100%",
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        maxWidth: '100%',
         borderBottom: `1px solid ${COLORS.WHITE_CC}`,
-        borderRadius: "5px",
+        borderRadius: '5px',
         padding: 2
       }}>
       <Box>
@@ -30,8 +30,8 @@ const WorkExperienceCard: React.FC<IProps> = (props) => {
         <Box
           mt={1}
           sx={{
-            display: "flex",
-            alignItems: "center"
+            display: 'flex',
+            alignItems: 'center'
           }}>
           <BusinessOutlined />
           <Typography variant="caption" ml={1}>
@@ -39,7 +39,7 @@ const WorkExperienceCard: React.FC<IProps> = (props) => {
           </Typography>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "end" }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'end' }}>
         {typeOfWork && (
           <Chip variant="outlined" color="primary" label={typeOfWork} />
         )}
@@ -47,8 +47,8 @@ const WorkExperienceCard: React.FC<IProps> = (props) => {
         <Box
           mt={1}
           sx={{
-            display: "flex",
-            alignItems: "center"
+            display: 'flex',
+            alignItems: 'center'
           }}>
           <CalendarMonthOutlined />
           <Typography variant="caption" ml={1}>

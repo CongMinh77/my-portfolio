@@ -1,7 +1,7 @@
-import { createTheme } from "@mui/material/styles"
-import { COLORS, PALETTES_1 } from "../constants"
+import { createTheme } from '@mui/material/styles'
+import { COLORS, PALETTES_1 } from '../configs'
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface Theme {
     header: {
       height: number
@@ -79,7 +79,7 @@ const MyTheme = createTheme({
     height: 150
   },
   palette: {
-    mode: "light",
+    mode: 'light',
     background: {
       default: COLORS.WHITE_EF
     },

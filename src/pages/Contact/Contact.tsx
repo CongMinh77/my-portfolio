@@ -89,6 +89,17 @@ const Contact = () => {
               display: 'flex',
               alignItems: 'center'
             }}>
+            <PhoneAndroidOutlined />
+            <Typography ml={2} variant="body1">
+              088 618 2681
+            </Typography>
+          </Box>
+          <Box
+            mt={3}
+            sx={{
+              display: 'flex',
+              alignItems: 'center'
+            }}>
             <EmailOutlined />
             <Typography ml={2} variant="body1">
               congminh.se7en@gmail.com

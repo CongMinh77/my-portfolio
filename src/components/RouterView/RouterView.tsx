@@ -1,8 +1,8 @@
-import React, { Suspense, useContext } from "react"
-import RouteChildrenContext from "../../context/RouterChildrenContext"
-import Loading from "../Loading"
-import { Route, Routes } from "react-router-dom"
-import ErrorBlock from "../ErrorBlock"
+import React, { Suspense, useContext } from 'react'
+import RouteChildrenContext from '../../context/RouterChildrenContext'
+import Loading from '../Loading'
+import { Route, Routes } from 'react-router-dom'
+import ErrorBlock from '../ErrorBlock'
 
 const RouterView = () => {
   const routerChildren = useContext(RouteChildrenContext)
@@ -28,10 +28,11 @@ const RouterView = () => {
                   Component={(props) => {
                     return (
                       <RouteChildrenContext.Provider value={childRoutes}>
-                        <Component {...props}></Component>
+                        <Component {...props} />
                       </RouteChildrenContext.Provider>
                     )
-                  }}></Route>
+                  }}
+                />
               )
             )}
 

@@ -19,8 +19,10 @@ import { Link, NavLink } from 'react-router-dom'
 import SignNCM from '../../assets/NCMinh-white.png'
 import AvatarLogo from '../../assets/avatar.png'
 import NCM from '../../assets/logo.png'
-import { PALETTES_1 } from '../../constants'
+import { PALETTES_1 } from '../../configs'
 import LanguageSelector from '../LanguageSelector'
+import SmartImage from '../SmartImage'
+import { useStyles } from './styles'
 
 const pages = ['home', 'service', 'resume', 'about', 'contact']
 
@@ -29,13 +31,14 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = (props) => {
-  useEffect(() => {}, [])
   const [t] = useTranslation()
+  const classes = useStyles()
+
   const stateTheme = localStorage.getItem('theme')
 
-  const [toggleTheme, setToggleTheme] = React.useState<boolean>(
-    stateTheme === 'true' ? true : false
-  )
+  // const [toggleTheme, setToggleTheme] = React.useState<boolean>(
+  //   stateTheme === 'true' ? true : false
+  // )
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -56,7 +59,12 @@ const Header: React.FC<IProps> = (props) => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Link to="/">
-              <img alt="Logo" style={{ height: 50 }} src={NCM} />
+              <SmartImage
+                src={NCM}
+                alt="Logo"
+                placeholder="NCM"
+                customStyle={{ height: 50 }}
+              />
             </Link>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -97,14 +105,14 @@ const Header: React.FC<IProps> = (props) => {
             </Box>
 
             <Box
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                letterSpacing: '.3rem',
-                color: 'inherit'
-              }}>
-              <img alt="Logo" style={{ height: 50 }} src={SignNCM} />
+              className={classes.containerLogoMobile}
+              sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <SmartImage
+                src={SignNCM}
+                alt="Logo"
+                placeholder="NCM"
+                customStyle={{ height: 50 }}
+              />
             </Box>
             <Box
               sx={{
@@ -135,7 +143,7 @@ const Header: React.FC<IProps> = (props) => {
               </Box>
             </Box>
 
-            <Box sx={{ flexGrow: 0, display: 'flex' }}>
+            <Box sx={{ display: 'flex' }}>
               {/* <Switch
                 checked={toggleTheme}
                 onChange={() => {

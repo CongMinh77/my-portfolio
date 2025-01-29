@@ -73,5 +73,11 @@
     "title": "My Portfolio"
   },
   "about_me": "About me",
-  "contact_me": "Contact me"
+  "contact_me": "Contact me",
+  "random-dice": "Random dice",
+  "small-result": "Small result",
+  "big-result": "Big result",
+  "lunar": {
+    "your-lunar-year": "Your lunar year"
+  }
 }

@@ -1,28 +1,38 @@
-import React from "react"
-import { useTranslation } from "react-i18next"
-import ViFlag from "../../assets/vi.png"
-import EnFlag from "../../assets/en.png"
-import { Box, Button, Tooltip } from "@mui/material"
+import { Box, IconButton, Tooltip } from '@mui/material'
+import { useTranslation } from 'react-i18next'
+import EnFlag from '../../assets/en.png'
+import ViFlag from '../../assets/vi.png'
+import SmartImage from '../SmartImage'
 
 const LanguageSelector = () => {
   const [t, i18n] = useTranslation()
 
   const handleChangeLocale = (locale: string) => {
     i18n.changeLanguage(locale)
-    localStorage.setItem("locale", locale)
+    localStorage.setItem('locale', locale)
   }
   return (
-    <Box style={{ display: "flex" }}>
-      <Button sx={{ paddingX: 0 }} onClick={() => handleChangeLocale("vi")}>
-        <Tooltip title={t("language-selector.languages.vi")}>
-          <img src={ViFlag} style={{ height: 20 }} alt="ViFlag" />
-        </Tooltip>
-      </Button>
-      <Button sx={{ paddingX: 0 }} onClick={() => handleChangeLocale("en")}>
-        <Tooltip title={t("language-selector.languages.en")}>
-          <img src={EnFlag} style={{ height: 20 }} alt="EnFlag" />
-        </Tooltip>
-      </Button>
+    <Box style={{ display: 'flex' }}>
+      <Tooltip title={t('language-selector.languages.vi')}>
+        <IconButton onClick={() => handleChangeLocale('vi')}>
+          <SmartImage
+            src={ViFlag}
+            alt="ViFlag"
+            placeholder="Vi"
+            customStyle={{ height: 15, width: 22, borderRadius: 5 }}
+          />
+        </IconButton>
+      </Tooltip>
+      <Tooltip title={t('language-selector.languages.en')}>
+        <IconButton onClick={() => handleChangeLocale('en')}>
+          <SmartImage
+            src={EnFlag}
+            alt="EnFlag"
+            placeholder="En"
+            customStyle={{ height: 15, width: 22, borderRadius: 5 }}
+          />
+        </IconButton>
+      </Tooltip>
     </Box>
   )
 }

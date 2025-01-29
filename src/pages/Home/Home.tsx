@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Me from '../../assets/main-img.jpg'
-import { COLORS } from '../../constants'
+import { COLORS } from '../../configs'
 import { getPageTitle } from '../../utils'
 import About from '../About'
 import Contact from '../Contact'
@@ -44,7 +44,11 @@ const Home = () => {
       <Box sx={{ maxWidth: '1440px', margin: '0 auto' }}>
         <Portfolio />
         <About />
-        <Service showFinancial={false} showGame={false} />
+        <Service
+          showFinancial={false}
+          showGame={false}
+          showLunarCalculator={false}
+        />
         <Resume />
         <Contact />
       </Box>

@@ -73,5 +73,11 @@
     "title": "Portfolio của tôi"
   },
   "about_me": "Về tôi",
-  "contact_me": "Liên hệ với tôi"
+  "contact_me": "Liên hệ với tôi",
+  "random-dice": "Xúc ngẫu nhiên",
+  "small-result": "Nhỏ",
+  "big-result": "Lớn",
+  "lunar": {
+    "your-lunar-year": "Năm sinh"
+  }
 }

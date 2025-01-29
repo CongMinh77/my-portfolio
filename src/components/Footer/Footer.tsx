@@ -2,7 +2,7 @@ import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material'
 import { Box, Divider, Grid, IconButton, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import NCM from '../../assets/logo.png'
-import { PALETTES_1 } from '../../constants'
+import { PALETTES_1 } from '../../configs'
 import { Link } from 'react-router-dom'
 import { useMemo } from 'react'
 
