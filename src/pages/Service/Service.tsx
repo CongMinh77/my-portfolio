@@ -63,8 +63,8 @@ const Service: React.FC<IProps> = (props) => {
           </Grid>
         </Grid>
       )}
-      {showGame && <BigSmallGame />}
-      {showLunarCalculator && <LunarCalculator />}
+      {/* {showGame && <BigSmallGame />}
+      {showLunarCalculator && <LunarCalculator />} */}
     </div>
   )
 }

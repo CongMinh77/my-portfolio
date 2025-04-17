@@ -48,3 +48,5 @@ export const NGU_HANH = [
   { name: 'Thổ', value: 4 },
   { name: 'Mộc', value: 5 }
 ]
+
+export const CUNG_MENH = [{ name: 'Khảm', value: 1, gender: 'MALE' }]
