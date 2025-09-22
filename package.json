@@ -57,5 +57,10 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
     "@types/lodash": "^4.14.201"
+  },
+  "overrides": {
+    "@mui/styles": {
+      "react": "$react"
+    }
   }
 }
