@@ -1,6 +1,6 @@
-import { Route, Routes } from "react-router-dom"
-import ErrorBlock from "../components/ErrorBlock"
-import { About, Contact, Home, Resume, Service } from "../pages"
+import { About, Contact, Home, Resume, Service, Tools } from '@/pages'
+import { Route, Routes } from 'react-router-dom'
+import ErrorBlock from '../components/ErrorBlock'
 
 const Routing = () => {
   return (
@@ -11,6 +11,7 @@ const Routing = () => {
       <Route path="/service" Component={Service} />
       <Route path="/resume" Component={Resume} />
       <Route path="/contact" Component={Contact} />
+      <Route path="/tools" Component={Tools} />
       <Route path="*" element={<ErrorBlock variant="404" />} />
     </Routes>
   )

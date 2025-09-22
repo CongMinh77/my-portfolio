@@ -7,7 +7,8 @@
     "blog": "Blog",
     "contact": "Liên hệ",
     "resume": "Tóm tắt",
-    "service": "Dịch vụ"
+    "service": "Dịch vụ",
+    "tools": "Công cụ"
   },
   "about": {
     "title": "Về tôi",
@@ -79,5 +80,8 @@
   "big-result": "Lớn",
   "lunar": {
     "your-lunar-year": "Năm sinh"
+  },
+  "tools": {
+    "title": "Công cụ"
   }
 }

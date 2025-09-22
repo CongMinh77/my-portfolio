@@ -23,7 +23,7 @@ import LanguageSelector from '../LanguageSelector'
 import SmartImage from '../SmartImage'
 import { useStyles } from './styles'
 
-const pages = ['home', 'service', 'resume', 'about', 'contact']
+const pages = ['home', 'service', 'resume', 'about', 'contact', 'tools']
 
 interface IProps {
   children?: React.ReactNode
