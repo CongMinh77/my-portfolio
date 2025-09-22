@@ -9,15 +9,14 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  Switch,
   Toolbar,
   Typography
 } from '@mui/material'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
+import { Images } from 'utils'
 import SignNCM from '../../assets/NCMinh-white.png'
-import AvatarLogo from '../../assets/avatar.png'
 import NCM from '../../assets/logo.png'
 import { PALETTES_1 } from '../../configs'
 import LanguageSelector from '../LanguageSelector'
@@ -33,8 +32,6 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   const [t] = useTranslation()
   const classes = useStyles()
-
-  const stateTheme = localStorage.getItem('theme')
 
   // const [toggleTheme, setToggleTheme] = React.useState<boolean>(
   //   stateTheme === 'true' ? true : false
@@ -144,18 +141,9 @@ const Header: React.FC<IProps> = (props) => {
             </Box>
 
             <Box sx={{ display: 'flex' }}>
-              {/* <Switch
-                checked={toggleTheme}
-                onChange={() => {
-                  setToggleTheme(!toggleTheme)
-                  localStorage.setItem("theme", `${!toggleTheme}`)
-                }}
-                name="theme"
-                color="secondary"
-              /> */}
               <LanguageSelector />
               <IconButton sx={{ p: 0 }}>
-                <Avatar alt="MinhNC" src={AvatarLogo} />
+                <Avatar alt="MinhNC" src={Images.home.avtNCM} />
               </IconButton>
             </Box>
           </Toolbar>

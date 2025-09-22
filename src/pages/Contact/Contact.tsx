@@ -6,7 +6,7 @@ import {
 import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { getPageTitle } from '../../utils'
+import { getPageTitle } from '@utils/index'
 
 const Contact = () => {
   const [t] = useTranslation()

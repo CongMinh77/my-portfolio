@@ -1,7 +1,7 @@
-import { Box, Grid, TextField, Typography } from "@mui/material"
-import numeral from "numeral"
-import React, { useMemo, useState } from "react"
-import { useTranslation } from "react-i18next"
+import { Box, Grid, TextField, Typography } from '@mui/material'
+import numeral from 'numeral'
+import React, { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const FinancialManagement = () => {
   const { t } = useTranslation()
@@ -22,7 +22,7 @@ const FinancialManagement = () => {
   return (
     <Box p={2}>
       <TextField
-        label={t("service.your_salary")}
+        label={t('service.your_salary')}
         variant="outlined"
         onChange={(e) => setSalary(Number(e.target.value))}
       />
@@ -30,38 +30,38 @@ const FinancialManagement = () => {
       <Grid container rowSpacing={2}>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("service.necessary")}</Typography>
-            <Typography>{numeral(firstPot).format("0,0[.]00")}</Typography>
+            <Typography>{t('service.necessary')}</Typography>
+            <Typography>{numeral(firstPot).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("sevice.savings")}</Typography>
-            <Typography>{numeral(pots10Percent).format("0,0[.]00")}</Typography>
+            <Typography>{t('sevice.savings')}</Typography>
+            <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("service.self-development")}</Typography>
-            <Typography>{numeral(pots10Percent).format("0,0[.]00")}</Typography>
+            <Typography>{t('service.self-development')}</Typography>
+            <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("service.investment")}</Typography>
-            <Typography>{numeral(pots10Percent).format("0,0[.]00")}</Typography>
+            <Typography>{t('service.investment')}</Typography>
+            <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("service.enjoys")}</Typography>
-            <Typography>{numeral(pots10Percent).format("0,0[.]00")}</Typography>
+            <Typography>{t('service.enjoys')}</Typography>
+            <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
         <Grid item xs={2}>
           <Box p={2}>
-            <Typography>{t("service.gifts")}</Typography>
-            <Typography>{numeral(pots5Percent).format("0,0[.]00")}</Typography>
+            <Typography>{t('service.gifts')}</Typography>
+            <Typography>{numeral(pots5Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
       </Grid>

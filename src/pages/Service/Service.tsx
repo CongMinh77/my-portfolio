@@ -2,11 +2,10 @@ import { CodeRounded, DrawOutlined } from '@mui/icons-material'
 import { Grid } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import ServiceCard from '../../components/ServiceCard'
-import { getPageTitle } from '../../utils'
-import BigSmallGame from '../../widgets/BigSmallGame'
-import FinancialManagement from '../FinancialManagement'
-import LunarCalculator from 'widgets/LunarCalculator'
+import ServiceCard from '@components/ServiceCard'
+import { getPageTitle } from '@utils/index'
+import FinancialManagement from '@pages/FinancialManagement'
+// Removed unused imports
 
 interface ICard {
   title: string
@@ -15,8 +14,7 @@ interface ICard {
 
 interface IProps {
   showFinancial?: boolean
-  showGame?: boolean
-  showLunarCalculator?: boolean
+  // Removed unused props
 }
 
 const cards: ICard[] = [
@@ -32,9 +30,8 @@ const cards: ICard[] = [
 
 const Service: React.FC<IProps> = (props) => {
   const {
-    showFinancial = true,
-    showGame = true,
-    showLunarCalculator = true
+    showFinancial = true
+    // Removed unused props
   } = props
 
   const [t] = useTranslation()

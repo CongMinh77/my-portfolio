@@ -1,14 +1,14 @@
 import { Box, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import Me from '../../assets/main-img.jpg'
-import { COLORS } from '../../configs'
-import { getPageTitle } from '../../utils'
-import About from '../About'
-import Contact from '../Contact'
-import Portfolio from '../Portfolio'
-import Resume from '../Resume'
-import Service from '../Service'
+import Me from '@assets/main-img.jpg'
+import { COLORS } from '@/configs'
+import { getPageTitle } from '@utils/index'
+import About from '@pages/About'
+import Contact from '@pages/Contact'
+import Portfolio from '@pages/Portfolio'
+import Resume from '@pages/Resume'
+import Service from '@pages/Service'
 import { useStyles } from './styles'
 
 const Home = () => {
@@ -46,8 +46,6 @@ const Home = () => {
         <About />
         <Service
           showFinancial={false}
-          showGame={false}
-          showLunarCalculator={false}
         />
         <Resume />
         <Contact />

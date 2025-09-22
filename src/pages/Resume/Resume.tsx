@@ -1,46 +1,49 @@
-import { useEffect } from "react"
-import { useTranslation } from "react-i18next"
-import { getPageTitle } from "../../utils"
-import { Box, Grid, Typography } from "@mui/material"
-import AvatarLogo from "../../assets/avatar.png"
-import WorkExperienceCard from "../../components/WorkExperienceCard"
+import { Box, Grid, Typography } from '@mui/material'
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import WorkExperienceCard from '@components/WorkExperienceCard'
+import { getPageTitle, Images } from '@utils/index'
 
 const career = [
   {
-    jobTitle: "Full Stack Developer",
-    company: "Deha VietNam JSC.",
-    date: "November 2021 - Present",
-    typeOfWork: "Full time"
+    jobTitle: 'Full Stack Developer',
+    company: 'Deha VietNam JSC.',
+    date: 'November 2021 - Present',
+    typeOfWork: 'Full time'
   }
 ]
 
 const education = [
   {
-    schoolName: "Thang Long University",
-    date: "2018 - 2022",
-    degree: "Bachelor Degree",
-    company: "Computer Science"
+    schoolName: 'Thang Long University',
+    date: '2018 - 2022',
+    degree: 'Bachelor Degree',
+    company: 'Computer Science'
   }
 ]
 
 const Resume = () => {
   const [t] = useTranslation()
   useEffect(() => {
-    document.title = getPageTitle(t("resume.title"))
+    document.title = getPageTitle(t('resume.title'))
   }, [t])
 
   return (
-    <div style={{ width: "100%" }}>
-      <h1 style={{ textAlign: "center" }}>{t("resume.title")}</h1>
-      <Grid container>
+    <div style={{ width: '100%' }}>
+      <h1 style={{ textAlign: 'center' }}>{t('resume.title')}</h1>
+      <Grid container spacing={2}>
         <Grid item xs={4}>
-          <Box sx={{ display: "flex", justifyContent: "end" }}>
-            <img src={AvatarLogo} alt="avt-bio" style={{ width: "100%" }} />
+          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+            <img
+              src={Images.home.avtNCM}
+              alt="avt-bio"
+              style={{ width: '100%' }}
+            />
           </Box>
         </Grid>
         <Grid item xs={8}>
           <Box>
-            <Typography variant="h4">{t("resume.work-experience")}</Typography>
+            <Typography variant="h4">{t('resume.work-experience')}</Typography>
             {career &&
               career.map((career) => (
                 <WorkExperienceCard
@@ -53,7 +56,7 @@ const Resume = () => {
               ))}
           </Box>
           <Box marginTop={3}>
-            <Typography variant="h4">{t("resume.education")}</Typography>
+            <Typography variant="h4">{t('resume.education')}</Typography>
             {education &&
               education.map((edu) => (
                 <WorkExperienceCard
