@@ -1,21 +1,25 @@
 import MenuIcon from '@mui/icons-material/Menu'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LightModeIcon from '@mui/icons-material/LightMode'
 import {
   AppBar,
   Avatar,
   Box,
   Button,
   Container,
-  CssBaseline,
   IconButton,
   Menu,
   MenuItem,
+  Switch,
   Toolbar,
-  Typography
+  Typography,
+  useTheme as useMuiTheme
 } from '@mui/material'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import { Images } from 'utils'
+import { useTheme } from '../../theme/ThemeContext'
 import SignNCM from '../../assets/NCMinh-white.png'
 import NCM from '../../assets/logo.png'
 import { PALETTES_1 } from '../../configs'
@@ -32,10 +36,8 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   const [t] = useTranslation()
   const classes = useStyles()
-
-  // const [toggleTheme, setToggleTheme] = React.useState<boolean>(
-  //   stateTheme === 'true' ? true : false
-  // )
+  const { isDarkMode, toggleTheme } = useTheme()
+  const muiTheme = useMuiTheme()
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -48,10 +50,9 @@ const Header: React.FC<IProps> = (props) => {
 
   return (
     <>
-      <CssBaseline />
       <AppBar
         style={{
-          backgroundColor: PALETTES_1.BLUE
+          backgroundColor: muiTheme.palette.mode === 'dark' ? '#1e1e1e' : PALETTES_1.BLUE
         }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -130,7 +131,7 @@ const Header: React.FC<IProps> = (props) => {
                       onClick={handleCloseNavMenu}
                       sx={{
                         my: 2,
-                        color: PALETTES_1.BLACK,
+                        color: muiTheme.palette.text.primary,
                         display: 'block'
                       }}>
                       {t(`nav.${page}`)}
@@ -140,7 +141,16 @@ const Header: React.FC<IProps> = (props) => {
               </Box>
             </Box>
 
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
+                {isDarkMode ? <DarkModeIcon fontSize="small" /> : <LightModeIcon fontSize="small" />}
+              </Box>
+              <Switch
+                checked={isDarkMode}
+                onChange={toggleTheme}
+                name="theme"
+                color="secondary"
+              />
               <LanguageSelector />
               <IconButton sx={{ p: 0 }}>
                 <Avatar alt="MinhNC" src={Images.home.avtNCM} />
