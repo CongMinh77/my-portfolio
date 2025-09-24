@@ -41,7 +41,7 @@ const darkTheme = createTheme({
           color: '#ffffff'
         }
       }
-    },
+    }
   },
   // Thêm các thuộc tính bắt buộc từ ThemeOptions đã mở rộng
   header: {

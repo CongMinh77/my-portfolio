@@ -15,7 +15,7 @@ import {
   Typography,
   useTheme as useMuiTheme
 } from '@mui/material'
-import React from 'react'
+import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import { Images } from 'utils'
@@ -164,4 +164,5 @@ const Header: React.FC<IProps> = (props) => {
   )
 }
 
-export default Header
+// Sử dụng React.memo để ngăn re-render khi không có props thay đổi
+export default memo(Header)
