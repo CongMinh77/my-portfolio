@@ -1,6 +1,6 @@
-import MenuIcon from '@mui/icons-material/Menu'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import LightModeIcon from '@mui/icons-material/LightMode'
+import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
   Avatar,
@@ -19,10 +19,9 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import { Images } from 'utils'
-import { useTheme } from '../../theme/ThemeContext'
-import SignNCM from '../../assets/NCMinh-white.png'
-import NCM from '../../assets/logo.png'
+
 import { PALETTES_1 } from '../../configs'
+import { useTheme } from '../../theme/ThemeContext'
 import LanguageSelector from '../LanguageSelector'
 import SmartImage from '../SmartImage'
 import { useStyles } from './styles'
@@ -52,13 +51,14 @@ const Header: React.FC<IProps> = (props) => {
     <>
       <AppBar
         style={{
-          backgroundColor: muiTheme.palette.mode === 'dark' ? '#1e1e1e' : PALETTES_1.BLUE
+          backgroundColor:
+            muiTheme.palette.mode === 'dark' ? '#1e1e1e' : PALETTES_1.BLUE
         }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Link to="/">
               <SmartImage
-                src={NCM}
+                src={isDarkMode ? Images.home.logoWhite : Images.home.logoColor}
                 alt="Logo"
                 placeholder="NCM"
                 customStyle={{ height: 50 }}
@@ -106,7 +106,7 @@ const Header: React.FC<IProps> = (props) => {
               className={classes.containerLogoMobile}
               sx={{ display: { xs: 'flex', md: 'none' } }}>
               <SmartImage
-                src={SignNCM}
+                src={isDarkMode ? Images.home.logoWhite : Images.home.logoColor}
                 alt="Logo"
                 placeholder="NCM"
                 customStyle={{ height: 50 }}
@@ -143,7 +143,11 @@ const Header: React.FC<IProps> = (props) => {
 
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-                {isDarkMode ? <DarkModeIcon fontSize="small" /> : <LightModeIcon fontSize="small" />}
+                {isDarkMode ? (
+                  <DarkModeIcon fontSize="small" />
+                ) : (
+                  <LightModeIcon fontSize="small" />
+                )}
               </Box>
               <Switch
                 checked={isDarkMode}

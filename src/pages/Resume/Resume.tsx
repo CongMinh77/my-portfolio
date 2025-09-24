@@ -30,7 +30,12 @@ const Resume = () => {
 
   return (
     <div style={{ width: '100%' }}>
-      <h1 style={{ textAlign: 'center' }}>{t('resume.title')}</h1>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>
+        {t('resume.title')}
+      </Typography>
+
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <Box sx={{ display: 'flex', justifyContent: 'end' }}>

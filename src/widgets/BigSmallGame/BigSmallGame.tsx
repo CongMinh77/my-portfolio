@@ -1,15 +1,13 @@
 import { Box, Button } from '@mui/material'
 import { TYPE_RESULT_ROLL } from 'configs'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import f1 from '../../assets/AllFaceCube/t1l2r3.svg'
 import f2 from '../../assets/AllFaceCube/t2l3r1.svg'
 import f3 from '../../assets/AllFaceCube/t3l2r6.svg'
 import f4 from '../../assets/AllFaceCube/t4l2r1.svg'
 import f5 from '../../assets/AllFaceCube/t5l1r3.svg'
 import f6 from '../../assets/AllFaceCube/t6l3r2.svg'
-import { useTranslation } from 'react-i18next'
-
-type IProps = {}
 
 type IPropResults = {
   dice: number
@@ -24,7 +22,7 @@ export default function BigSmallGame() {
   ])
 
   const handleRandomDice = (typeResult?: number) => {
-    const number = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+    // const number = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
     if (typeResult === TYPE_RESULT_ROLL.SMALL) {
       const lastNumber = Math.floor(Math.random() * 6) + 1
       if (lastNumber)

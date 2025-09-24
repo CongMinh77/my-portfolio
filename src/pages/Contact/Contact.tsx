@@ -15,7 +15,11 @@ const Contact = () => {
   }, [t])
   return (
     <>
-      <h1 style={{ textAlign: 'center' }}>{t('contact.title')}</h1>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>
+        {t('contact.title')}
+      </Typography>
       <Grid container>
         <Grid item xs={6} sx={{ padding: 3 }}>
           <Box sx={{ display: 'flex', width: '100%' }}>

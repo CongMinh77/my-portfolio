@@ -1,5 +1,5 @@
 import { CodeRounded, DrawOutlined } from '@mui/icons-material'
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import ServiceCard from '@components/ServiceCard'
@@ -41,7 +41,11 @@ const Service: React.FC<IProps> = (props) => {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center' }}>{t('service.title')}</h1>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>
+        {t('service.title')}
+      </Typography>
       <Grid container rowSpacing={2}>
         {cards.map((card, index) => (
           <Grid key={`${card.title}-${index}`} item xs={12 / cards.length}>
@@ -60,8 +64,6 @@ const Service: React.FC<IProps> = (props) => {
           </Grid>
         </Grid>
       )}
-      {/* {showGame && <BigSmallGame />}
-      {showLunarCalculator && <LunarCalculator />} */}
     </div>
   )
 }

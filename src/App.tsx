@@ -1,24 +1,24 @@
-import { Box, CssBaseline, LinearProgress } from '@mui/material'
+import { CssBaseline, LinearProgress } from '@mui/material'
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
-import { ThemeProvider } from './theme/ThemeContext'
-import { BrowserRouter } from 'react-router-dom'
-import { I18nextProvider } from 'react-i18next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import React, { Suspense } from 'react'
 import i18next from 'i18next'
+import React, { Suspense } from 'react'
+import { I18nextProvider } from 'react-i18next'
+import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './theme/ThemeContext'
 
 // Components
-import Layout from './components/Layout'
-import Routing from './routes/routing'
 import ErrorBlock from './components/ErrorBlock'
 import ErrorBoundary from './components/ErrorBoundary'
+import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
+import Routing from './routes/routing'
 
 // Resources
-import MyTheme from './themes/MyTheme'
 import en from './locales/en.json'
 import vi from './locales/vi.json'
+import MyTheme from './themes/MyTheme'
 
 // Styles
 import './App.css'
