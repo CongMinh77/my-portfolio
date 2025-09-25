@@ -1,7 +1,8 @@
 import React, { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { LinearProgress } from '@mui/material'
 import ErrorBlock from '../components/ErrorBlock'
+import PageTransition from '../components/PageTransition'
+import LoadingScreen from '../components/LoadingScreen'
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('@/pages/Home'))
@@ -13,44 +14,58 @@ const Tools = lazy(() => import('@/pages/Tools'))
 
 /**
  * Main routing component with lazy-loaded routes
- * Each page is wrapped in Suspense to prevent Header re-render during page transitions
+ * Each page is wrapped in Suspense and PageTransition for smooth transitions
  */
 const Routing = () => {
   return (
     <Routes>
       <Route path="/" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Home />
+        <Suspense fallback={<LoadingScreen message="Loading Home..." />}>
+          <PageTransition>
+            <Home />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/home" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Home />
+        <Suspense fallback={<LoadingScreen message="Loading Home..." />}>
+          <PageTransition>
+            <Home />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/about" element={
-        <Suspense fallback={<LinearProgress />}>
-          <About />
+        <Suspense fallback={<LoadingScreen message="Loading About..." />}>
+          <PageTransition>
+            <About />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/service" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Service />
+        <Suspense fallback={<LoadingScreen message="Loading Services..." />}>
+          <PageTransition>
+            <Service />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/resume" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Resume />
+        <Suspense fallback={<LoadingScreen message="Loading Resume..." />}>
+          <PageTransition>
+            <Resume />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/contact" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Contact />
+        <Suspense fallback={<LoadingScreen message="Loading Contact..." />}>
+          <PageTransition>
+            <Contact />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="/tools" element={
-        <Suspense fallback={<LinearProgress />}>
-          <Tools />
+        <Suspense fallback={<LoadingScreen message="Loading Tools..." />}>
+          <PageTransition>
+            <Tools />
+          </PageTransition>
         </Suspense>
       } />
       <Route path="*" element={<ErrorBlock variant="404" />} />

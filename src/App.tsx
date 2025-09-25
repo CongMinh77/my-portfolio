@@ -7,6 +7,7 @@ import React, { Suspense } from 'react'
 import { I18nextProvider } from 'react-i18next'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './theme/ThemeContext'
+import ScrollProgressBar from './components/ScrollProgressBar'
 
 // Components
 import ErrorBlock from './components/ErrorBlock'
@@ -56,6 +57,7 @@ const App = (): JSX.Element => {
               <ErrorBoundary fallback={ErrorBlock}>
                 <Suspense fallback={<LinearProgress />}>
                   <ScrollToTop />
+                  <ScrollProgressBar />
                   <Layout>
                     <Routing />
                   </Layout>
