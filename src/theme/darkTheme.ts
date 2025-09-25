@@ -50,7 +50,9 @@ const darkTheme = createTheme({
     color: '#ffffff'
   },
   footer: {
-    height: 150
+    height: 150,
+    bg: '#1e1e1e',
+    color: '#ffffff'
   },
   sidebar: {
     width: 224,

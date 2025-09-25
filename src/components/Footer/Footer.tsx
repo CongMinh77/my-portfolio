@@ -1,10 +1,12 @@
+import { LINKS } from '@/utils'
 import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material'
 import { Box, Divider, Grid, IconButton, Typography } from '@mui/material'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import NCM from '../../assets/logo.png'
 import { PALETTES_1 } from '../../configs'
-import { Link } from 'react-router-dom'
-import { useMemo } from 'react'
+import { useThemeCustom } from '@/theme'
 
 const services = [
   {
@@ -53,16 +55,17 @@ const iconSocial = [
 
 const Footer = () => {
   const [t] = useTranslation()
+  const { isDarkMode } = useThemeCustom()
 
   const information = useMemo(
     () => [
       {
         title: t('about_me'),
-        link: '/about'
+        link: LINKS.about
       },
       {
         title: t('contact_me'),
-        link: '/contact'
+        link: LINKS.contact
       }
     ],
     [t]
@@ -72,7 +75,7 @@ const Footer = () => {
       <footer style={{ width: '100%' }}>
         <Box
           sx={{
-            backgroundColor: PALETTES_1.BLUE,
+            backgroundColor: isDarkMode ? '#1e1e1e' : PALETTES_1.BLUE,
             paddingY: 5
           }}>
           <Grid

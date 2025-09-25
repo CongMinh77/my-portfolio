@@ -10,6 +10,8 @@ declare module '@mui/material/styles' {
     }
     footer: {
       height: number
+      bg: string
+      color: string
     }
     sidebar: {
       width: number
@@ -41,6 +43,8 @@ declare module '@mui/material/styles' {
     }
     footer: {
       height: number
+      bg: string
+      color: string
     }
     sidebar: {
       width?: number
@@ -76,7 +80,9 @@ const MyTheme = createTheme({
     fontColor: COLORS.WHITE
   },
   footer: {
-    height: 150
+    height: 150,
+    bg: COLORS.WHITE,
+    color: COLORS.HEADER_COLOR
   },
   palette: {
     mode: 'light',

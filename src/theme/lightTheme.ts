@@ -50,7 +50,9 @@ const lightTheme = createTheme({
     color: COLORS.HEADER_COLOR || '#000000'
   },
   footer: {
-    height: 150
+    height: 150,
+    bg: COLORS.WHITE,
+    color: COLORS.HEADER_COLOR || '#000000'
   },
   sidebar: {
     width: 224,

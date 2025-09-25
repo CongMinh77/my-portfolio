@@ -18,10 +18,10 @@ import {
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import { Images } from 'utils'
+import { Images, LINKS } from 'utils'
 
 import { PALETTES_1 } from '../../configs'
-import { useTheme } from '../../theme/ThemeContext'
+import { useThemeCustom } from '../../theme/ThemeContext'
 import LanguageSelector from '../LanguageSelector'
 import SmartImage from '../SmartImage'
 import { useStyles } from './styles'
@@ -35,7 +35,7 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   const [t] = useTranslation()
   const classes = useStyles()
-  const { isDarkMode, toggleTheme } = useTheme()
+  const { isDarkMode, toggleTheme } = useThemeCustom()
   const muiTheme = useMuiTheme()
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
@@ -51,12 +51,11 @@ const Header: React.FC<IProps> = (props) => {
     <>
       <AppBar
         style={{
-          backgroundColor:
-            muiTheme.palette.mode === 'dark' ? '#1e1e1e' : PALETTES_1.BLUE
+          backgroundColor: isDarkMode ? '#1e1e1e' : PALETTES_1.BLUE
         }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Link to="/">
+            <Link to={LINKS.home}>
               <SmartImage
                 src={isDarkMode ? Images.home.logoWhite : Images.home.logoColor}
                 alt="Logo"

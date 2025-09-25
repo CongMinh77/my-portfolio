@@ -19,7 +19,7 @@ import Routing from './routes/routing'
 // Resources
 import en from './locales/en.json'
 import vi from './locales/vi.json'
-import MyTheme from './themes/MyTheme'
+import MyTheme from './theme/MyTheme'
 
 // Styles
 import './App.css'

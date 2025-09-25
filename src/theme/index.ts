@@ -1,5 +1,5 @@
-import { ThemeProvider, useTheme } from './ThemeContext';
-import lightTheme from './lightTheme';
-import darkTheme from './darkTheme';
+import { ThemeProvider, useThemeCustom } from './ThemeContext'
+import lightTheme from './lightTheme'
+import darkTheme from './darkTheme'
 
-export { ThemeProvider, useTheme, lightTheme, darkTheme };
+export { ThemeProvider, useThemeCustom, lightTheme, darkTheme }
