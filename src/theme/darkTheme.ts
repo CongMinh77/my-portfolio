@@ -19,6 +19,19 @@ const darkTheme = createTheme({
       secondary: '#b3b3b3'
     }
   },
+  componentStyles: {
+    link: {
+      color: '#ffffff',
+      hoverColor: PALETTES_1.BLUE
+    },
+    icon: {
+      color: '#ffffff',
+      hoverColor: PALETTES_1.BLUE
+    },
+    divider: {
+      color: '#444444'
+    }
+  },
   typography: {
     fontFamily: `"Quicksand", "sans-serif"`,
     fontSize: 14,

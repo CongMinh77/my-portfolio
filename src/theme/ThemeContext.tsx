@@ -7,6 +7,7 @@ import darkTheme from './darkTheme'
 interface ThemeContextType {
   isDarkMode: boolean
   toggleTheme: () => void
+  theme: any
 }
 
 // Create the context
@@ -44,11 +45,15 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   }, [isDarkMode])
 
   // Select the current theme
-  const currentTheme = isDarkMode ? darkTheme : lightTheme
+  const theme = isDarkMode ? darkTheme : lightTheme
 
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-      <MuiThemeProvider theme={currentTheme}>{children}</MuiThemeProvider>
+    <ThemeContext.Provider value={{ 
+      isDarkMode, 
+      toggleTheme,
+      theme
+    }}>
+      <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
     </ThemeContext.Provider>
   )
 }

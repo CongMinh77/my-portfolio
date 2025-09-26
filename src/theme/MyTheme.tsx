@@ -33,6 +33,19 @@ declare module '@mui/material/styles' {
         minWidth: number
       }
     }
+    componentStyles: {
+      link: {
+        color: string
+        hoverColor: string
+      }
+      icon: {
+        color: string
+        hoverColor: string
+      }
+      divider: {
+        color: string
+      }
+    }
   }
 
   interface ThemeOptions {
@@ -64,6 +77,19 @@ declare module '@mui/material/styles' {
       }
       button: {
         minWidth: number
+      }
+    }
+    componentStyles?: {
+      link?: {
+        color: string
+        hoverColor: string
+      }
+      icon?: {
+        color: string
+        hoverColor: string
+      }
+      divider?: {
+        color: string
       }
     }
   }

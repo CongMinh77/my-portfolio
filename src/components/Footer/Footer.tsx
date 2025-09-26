@@ -1,12 +1,10 @@
-import { LINKS } from '@/utils'
+import { useThemeCustom } from '@/theme'
+import { Images, LINKS } from '@/utils'
 import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material'
 import { Box, Divider, Grid, IconButton, Typography } from '@mui/material'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import NCM from '../../assets/logo.png'
-import { PALETTES_1 } from '../../configs'
-import { useThemeCustom } from '@/theme'
 
 const services = [
   {
@@ -55,7 +53,7 @@ const iconSocial = [
 
 const Footer = () => {
   const [t] = useTranslation()
-  const { isDarkMode } = useThemeCustom()
+  const { isDarkMode, theme } = useThemeCustom()
 
   const information = useMemo(
     () => [
@@ -75,7 +73,7 @@ const Footer = () => {
       <footer style={{ width: '100%' }}>
         <Box
           sx={{
-            backgroundColor: isDarkMode ? '#1e1e1e' : PALETTES_1.BLUE,
+            backgroundColor: theme.footer.bg,
             paddingY: 5
           }}>
           <Grid
@@ -83,7 +81,13 @@ const Footer = () => {
             sx={{ paddingBottom: 2, maxWidth: '1440px', mx: 'auto' }}>
             <Grid item xs={3}>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                <img src={NCM} alt="Logo" style={{ height: 150 }} />
+                <img
+                  src={
+                    isDarkMode ? Images.home.logoWhite : Images.home.logoColor
+                  }
+                  alt="Logo"
+                  style={{ height: 150 }}
+                />
               </Box>
               <Box px={3}>
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -93,18 +97,25 @@ const Footer = () => {
                         key={`${key}-${item.link}`}
                         to={item.link}
                         target="_blank">
-                        <IconButton>{item.icon}</IconButton>
+                        <IconButton
+                          sx={{
+                            color: theme.componentStyles.icon.color
+                          }}>
+                          {item.icon}
+                        </IconButton>
                       </Link>
                     ))}
                 </Box>
               </Box>
             </Grid>
-
             <Grid item xs={3}>
               <Typography
                 variant="h5"
                 fontWeight={'bold'}
-                sx={{ paddingBottom: 2 }}>
+                sx={{
+                  paddingBottom: 2,
+                  color: theme.componentStyles.link.color
+                }}>
                 {t('footer.information')}
               </Typography>
               <Divider sx={{ width: '15%' }} />
@@ -120,8 +131,10 @@ const Footer = () => {
                     <Link key={`${key}-${info.title}`} to={info.link}>
                       <Typography
                         variant="subtitle1"
-                        color={PALETTES_1.BLACK}
-                        sx={{ paddingBottom: 1 }}>
+                        sx={{
+                          paddingBottom: 1,
+                          color: theme.componentStyles.link.color
+                        }}>
                         {info.title}
                       </Typography>
                     </Link>
@@ -133,7 +146,10 @@ const Footer = () => {
               <Typography
                 variant="h5"
                 fontWeight={'bold'}
-                sx={{ paddingBottom: 2 }}>
+                sx={{
+                  paddingBottom: 2,
+                  color: theme.componentStyles.link.color
+                }}>
                 {t('footer.services')}
               </Typography>
               <Divider sx={{ width: '15%' }} />
@@ -149,8 +165,10 @@ const Footer = () => {
                     <Link key={`${key}-${service.title}`} to={service.link}>
                       <Typography
                         variant="subtitle1"
-                        color={PALETTES_1.BLACK}
-                        sx={{ paddingBottom: 1 }}>
+                        sx={{
+                          paddingBottom: 1,
+                          color: theme.componentStyles.link.color
+                        }}>
                         {service.title}
                       </Typography>
                     </Link>
@@ -162,7 +180,10 @@ const Footer = () => {
               <Typography
                 variant="h5"
                 fontWeight={'bold'}
-                sx={{ paddingBottom: 2 }}>
+                sx={{
+                  paddingBottom: 2,
+                  color: theme.componentStyles.link.color
+                }}>
                 {t('footer.contact')}
               </Typography>
               <Divider sx={{ width: '15%' }} />
@@ -178,8 +199,10 @@ const Footer = () => {
                     <Link key={`${key}-${myContact.title}`} to={myContact.link}>
                       <Typography
                         variant="subtitle1"
-                        color={PALETTES_1.BLACK}
-                        sx={{ paddingBottom: 1 }}>
+                        sx={{
+                          paddingBottom: 1,
+                          color: theme.componentStyles.link.color
+                        }}>
                         {myContact.title}
                       </Typography>
                     </Link>
@@ -192,8 +215,13 @@ const Footer = () => {
 
           <Typography
             variant="subtitle2"
-            sx={{ textAlign: 'center', paddingTop: 4 }}>
-            © Copyright All rights reserved | Developer by NCM
+            sx={{
+              textAlign: 'center',
+              paddingTop: 4,
+              color: theme.palette.text.primary
+            }}>
+            {`© ${new Date().getFullYear()} Copyright All rights reserved | `}
+            {t('footer.developer')}
           </Typography>
         </Box>
       </footer>

@@ -35,7 +35,7 @@ interface IProps {
 const Header: React.FC<IProps> = (props) => {
   const [t] = useTranslation()
   const classes = useStyles()
-  const { isDarkMode, toggleTheme } = useThemeCustom()
+  const { isDarkMode, toggleTheme, theme } = useThemeCustom()
   const muiTheme = useMuiTheme()
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
@@ -51,7 +51,7 @@ const Header: React.FC<IProps> = (props) => {
     <>
       <AppBar
         style={{
-          backgroundColor: isDarkMode ? '#1e1e1e' : PALETTES_1.BLUE
+          backgroundColor: theme.header.bg
         }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>

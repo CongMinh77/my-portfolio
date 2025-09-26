@@ -19,6 +19,19 @@ const lightTheme = createTheme({
       secondary: '#555555'
     }
   },
+  componentStyles: {
+    link: {
+      color: PALETTES_1.BLACK,
+      hoverColor: PALETTES_1.BLUE
+    },
+    icon: {
+      color: PALETTES_1.BLACK,
+      hoverColor: PALETTES_1.BLUE
+    },
+    divider: {
+      color: '#e0e0e0'
+    }
+  },
   typography: {
     fontFamily: `"Quicksand", "sans-serif"`,
     fontSize: 14,

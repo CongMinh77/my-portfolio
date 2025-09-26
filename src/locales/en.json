@@ -65,7 +65,8 @@
   "footer": {
     "information": "Information",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "developer": "Developed by Minh Nguyen Cong"
   },
   "sevice": {
     "savings": "Savings"
