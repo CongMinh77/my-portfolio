@@ -49,8 +49,8 @@ const Portfolio = () => {
           {images.map((item) => (
             <ImageListItem key={item.img}>
               <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2`}
-                src={`${item.img}?w=248&fit=crop&auto=format`}
+                srcSet={`${item.img}`}
+                src={`${item.img}`}
                 alt={item.title}
                 loading="lazy"
                 style={{ borderRadius: '16px', padding: '8px' }}
