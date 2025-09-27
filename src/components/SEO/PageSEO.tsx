@@ -1,13 +1,13 @@
-import React from 'react';
-import SEO from './SEO';
-import BreadcrumbJsonLd from './BreadcrumbJsonLd';
+import React from 'react'
+import SEO from './SEO'
+import BreadcrumbJsonLd from './BreadcrumbJsonLd'
 
 interface PageSEOProps {
-  title: string;
-  description: string;
-  path: string;
-  keywords?: string[];
-  ogImage?: string;
+  title: string
+  description: string
+  path: string
+  keywords?: string[]
+  ogImage?: string
 }
 
 /**
@@ -20,11 +20,11 @@ const PageSEO: React.FC<PageSEOProps> = ({
   description,
   path,
   keywords,
-  ogImage = '/og-image.svg',
+  ogImage = '/og-image.svg'
 }) => {
-  const siteUrl = 'https://cmse7en-portfolio.vercel.app';
-  const url = `${siteUrl}${path}`;
-  
+  const siteUrl = 'https://cmse7en-portfolio.vercel.app'
+  const url = `${siteUrl}${path}`
+
   return (
     <>
       <SEO
@@ -35,8 +35,8 @@ const PageSEO: React.FC<PageSEOProps> = ({
         ogUrl={url}
         canonicalUrl={url}
       />
-      
-      <BreadcrumbJsonLd 
+
+      <BreadcrumbJsonLd
         items={[
           {
             name: 'Home',
@@ -49,7 +49,7 @@ const PageSEO: React.FC<PageSEOProps> = ({
         ]}
       />
     </>
-  );
-};
+  )
+}
 
-export default PageSEO;
+export default PageSEO

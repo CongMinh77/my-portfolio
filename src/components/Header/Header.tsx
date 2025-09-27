@@ -20,7 +20,6 @@ import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
 import { Images, LINKS } from 'utils'
 
-import { PALETTES_1 } from '../../configs'
 import { useThemeCustom } from '../../theme/ThemeContext'
 import LanguageSelector from '../LanguageSelector'
 import SmartImage from '../SmartImage'

@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cmse7en-portfolio.vercel.app//sitemap.xml
+Sitemap: https://cmse7en-portfolio.vercel.app/sitemap.xml
