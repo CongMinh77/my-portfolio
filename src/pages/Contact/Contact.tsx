@@ -7,6 +7,7 @@ import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { getPageTitle } from '@utils/index'
+import PageSEO from '@/components/SEO/PageSEO'
 
 const Contact = () => {
   const [t] = useTranslation()
@@ -15,6 +16,12 @@ const Contact = () => {
   }, [t])
   return (
     <>
+      <PageSEO 
+        title={t('contact.title') + " - Minh Nguyen"}
+        description={t('contact.meta.description') || "Get in touch with Minh Nguyen. Contact information and message form available."}
+        path="/contact"
+        keywords={t('contact.meta.keywords')?.split(', ') || ['contact', 'email', 'phone', 'message', 'get in touch']}
+      />
       <Typography
         variant="h4"
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>

@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { getPageTitle, Images } from '@utils/index'
+import PageSEO from '@/components/SEO/PageSEO'
 import { useStyles } from './styles'
 
 const About = () => {
@@ -16,6 +17,12 @@ const About = () => {
 
   return (
     <div style={{ width: '100%' }}>
+      <PageSEO 
+        title={t('about.title') + " - Minh Nguyen"}
+        description={t('about.meta.description') || "Learn more about Minh Nguyen, a fullstack developer with experience in web development, design, and digital transformation."}
+        path="/about"
+        keywords={t('about.meta.keywords')?.split(', ') || ['about', 'bio', 'fullstack developer', 'web development', 'design']}
+      />
       <Typography
         variant="h4"
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>

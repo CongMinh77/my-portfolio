@@ -9,6 +9,7 @@ import Contact from '@pages/Contact'
 import Portfolio from '@pages/Portfolio'
 import Resume from '@pages/Resume'
 import Service from '@pages/Service'
+import PageSEO from '@/components/SEO/PageSEO'
 import { useStyles } from './styles'
 
 const Home = () => {
@@ -19,6 +20,12 @@ const Home = () => {
   }, [t])
   return (
     <>
+      <PageSEO 
+        title={t('home.title') + " - Minh Nguyen"}
+        description={t('home.meta.description') || "Minh Nguyen's personal portfolio showcasing web development skills, projects, and experience."}
+        path="/"
+        keywords={['portfolio', 'web developer', 'frontend', 'react', 'typescript']}
+      />
       <Box sx={{ display: 'flex', position: 'relative' }}>
         <img
           src={Me}

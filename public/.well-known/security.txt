@@ -1,0 +1,4 @@
+Contact: mailto:congminh.se7en@gmail.com
+Expires: 2026-09-27T10:05:32+07:00
+Preferred-Languages: en, vi
+Canonical: https://cmse7en-portfolio.vercel.app/.well-known/security.txt

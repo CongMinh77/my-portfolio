@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import WorkExperienceCard from '@components/WorkExperienceCard'
 import { getPageTitle, Images } from '@utils/index'
+import PageSEO from '@/components/SEO/PageSEO'
 
 const career = [
   {
@@ -30,6 +31,12 @@ const Resume = () => {
 
   return (
     <div style={{ width: '100%' }}>
+      <PageSEO 
+        title={t('resume.title') + " - Minh Nguyen"}
+        description={t('resume.meta.description') || "View Minh Nguyen's professional resume, work experience, and educational background."}
+        path="/resume"
+        keywords={t('resume.meta.keywords')?.split(', ') || ['resume', 'CV', 'work experience', 'education', 'skills', 'career']}
+      />
       <Typography
         variant="h4"
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>

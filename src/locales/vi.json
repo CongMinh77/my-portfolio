@@ -18,6 +18,10 @@
     "my-bio": "Tiểu sử của tôi",
     "hire-me": "Thuê tôi",
     "download-cv": "Tải xuống CV",
+    "meta": {
+      "description": "Tìm hiểu thêm về Nguyễn Công Minh, lập trình viên fullstack với kinh nghiệm trong phát triển web, thiết kế và chuyển đổi số.",
+      "keywords": "về tôi, tiểu sử, lập trình viên fullstack, phát triển web, thiết kế"
+    },
     "description": {
       "development": "Phát triển phần mềm theo yêu cầu của khách, dễ dàng, nhanh chóng, hiện đại sử dụng các loại ngôn ngữ phổ biến dễ dàng bảo trì phần mềm và phù hợp với thị trường",
       "design": "Thiết kế ảnh bìa, chỉnh sửa ảnh bìa, ảnh chân dung phong cảnh, chỉnh sửa video",
@@ -28,7 +32,11 @@
   },
   "home": {
     "title": "Trang chủ",
-    "introduction": "Tôi là Nguyễn Công Minh"
+    "introduction": "Tôi là Nguyễn Công Minh",
+    "meta": {
+      "description": "Portfolio cá nhân của Nguyễn Công Minh giới thiệu các kỹ năng, dự án và kinh nghiệm phát triển web.",
+      "keywords": "portfolio, lập trình viên web, frontend, react, typescript"
+    }
   },
   "error": {
     "403": "Xin lỗi, bạn không thể truy cập nội dung này",
@@ -46,21 +54,33 @@
     "investment": "Đầu tư",
     "enjoys": "Thú vui cá nhân",
     "gifts": "Quà tặng",
-    "your_salary": "Thu nhập của bạn"
+    "your_salary": "Thu nhập của bạn",
+    "meta": {
+      "description": "Khám phá các dịch vụ được cung cấp bởi Nguyễn Công Minh bao gồm phát triển web, thiết kế và các giải pháp quản lý tài chính.",
+      "keywords": "dịch vụ, phát triển web, thiết kế, quản lý tài chính"
+    }
   },
   "resume": {
     "title": "Bản tóm tắt",
     "work-experience": "Kinh nghiệm làm việc",
-    "education": "Học vấn"
+    "education": "Học vấn",
+    "meta": {
+      "description": "Xem hồ sơ chuyên nghiệp, kinh nghiệm làm việc và quá trình học tập của Nguyễn Công Minh.",
+      "keywords": "hồ sơ, CV, kinh nghiệm làm việc, học vấn, kỹ năng, sự nghiệp"
+    }
   },
   "contact": {
     "title": "Liên hệ với tôi",
     "info": "Thông tin liên lạc",
     "first-name": "Tên",
     "last-name": "Họ",
-    "email-address": "Địa chỉ email",
+    "email-address": "Địa chỉ email",
     "messenger": "Lời nhắn",
-    "send-messenger": "Gửi tin nhắn"
+    "send-messenger": "Gửi tin nhắn",
+    "meta": {
+      "description": "Liên hệ với Nguyễn Công Minh. Thông tin liên lạc và biểu mẫu gửi tin nhắn có sẵn.",
+      "keywords": "liên hệ, email, điện thoại, tin nhắn, kết nối"
+    }
   },
   "footer": {
     "information": "Thông tin",
@@ -83,6 +103,10 @@
     "your-lunar-year": "Năm sinh"
   },
   "tools": {
-    "title": "Công cụ"
+    "title": "Công cụ",
+    "meta": {
+      "description": "Khám phá các công cụ hữu ích được tạo bởi Nguyễn Công Minh bao gồm quản lý tài chính, máy tính âm lịch và trò chơi.",
+      "keywords": "công cụ, tiện ích, quản lý tài chính, máy tính âm lịch, trò chơi"
+    }
   }
 }

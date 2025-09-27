@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import ServiceCard from '@components/ServiceCard'
 import { getPageTitle } from '@utils/index'
+import PageSEO from '@/components/SEO/PageSEO'
 import FinancialManagement from '@pages/FinancialManagement'
 // Removed unused imports
 
@@ -41,6 +42,12 @@ const Service: React.FC<IProps> = (props) => {
 
   return (
     <div>
+      <PageSEO 
+        title={t('service.title') + " - Minh Nguyen"}
+        description={t('service.meta.description') || "Explore the services offered by Minh Nguyen including web development, design, and financial management solutions."}
+        path="/service"
+        keywords={t('service.meta.keywords')?.split(', ') || ['services', 'web development', 'design', 'financial management']}
+      />
       <Typography
         variant="h4"
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>

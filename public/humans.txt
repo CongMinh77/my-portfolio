@@ -1,0 +1,12 @@
+/* TEAM */
+	Developer: Minh Nguyen Cong
+	Contact: congminh.se7en@gmail.com
+	GitHub: https://github.com/CongMinh77
+	Location: Ha Noi, Vietnam
+
+/* SITE */
+	Last update: 2025-09-27
+	Language: English, Vietnamese
+	Doctype: HTML5
+	IDE: Visual Studio Code
+	Technologies: React, TypeScript, Material-UI, Tailwind CSS

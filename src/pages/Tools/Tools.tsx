@@ -5,6 +5,7 @@ import FinancialManagement from '@pages/FinancialManagement'
 import { getPageTitle } from '@utils/index'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import PageSEO from '@/components/SEO/PageSEO'
 // Removed unused imports
 
 interface IProps {
@@ -22,6 +23,12 @@ const Tools: React.FC<IProps> = (props) => {
 
   return (
     <div>
+      <PageSEO 
+        title={t('tools.title') + " - Minh Nguyen"}
+        description={t('tools.meta.description') || "Explore useful tools created by Minh Nguyen including financial management, lunar calculator, and games."}
+        path="/tools"
+        keywords={t('tools.meta.keywords')?.split(', ') || ['tools', 'utilities', 'financial management', 'lunar calculator', 'games']}
+      />
       <Typography
         variant="h4"
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>

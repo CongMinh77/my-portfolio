@@ -18,6 +18,10 @@
     "my-bio": "My bio",
     "hire-me": "Hire me",
     "download-cv": "Download CV",
+    "meta": {
+      "description": "Learn more about Minh Nguyen, a fullstack developer with experience in web development, design, and digital transformation.",
+      "keywords": "about, bio, fullstack developer, web development, design"
+    },
     "description": {
       "development": "Develop software according to customer requirements, easily, quickly, and modernly using popular languages, easy to maintain software and suitable for the market",
       "design": "Design",
@@ -28,7 +32,11 @@
   },
   "home": {
     "title": "Home",
-    "introduction": "I'm Minh Nguyen Cong"
+    "introduction": "I'm Minh Nguyen Cong",
+    "meta": {
+      "description": "Minh Nguyen's personal portfolio showcasing web development skills, projects, and experience.",
+      "keywords": "portfolio, web developer, frontend, react, typescript"
+    }
   },
   "error": {
     "403": "Sorry, you cannot access this content",
@@ -46,12 +54,20 @@
     "investment": "Investment",
     "enjoys": "Enjoys",
     "gifts": "Gifts",
-    "your_salary": "Your Salary"
+    "your_salary": "Your Salary",
+    "meta": {
+      "description": "Explore the services offered by Minh Nguyen including web development, design, and financial management solutions.",
+      "keywords": "services, web development, design, financial management"
+    }
   },
   "resume": {
     "title": "Resume",
     "work-experience": "Work experience",
-    "education": "Education"
+    "education": "Education",
+    "meta": {
+      "description": "View Minh Nguyen's professional resume, work experience, and educational background.",
+      "keywords": "resume, CV, work experience, education, skills, career"
+    }
   },
   "contact": {
     "title": "Contact me",
@@ -60,7 +76,11 @@
     "last-name": "Last name",
     "email-address": "Email address",
     "messenger": "Messenger",
-    "send-messenger": "Send messenger"
+    "send-messenger": "Send messenger",
+    "meta": {
+      "description": "Get in touch with Minh Nguyen. Contact information and message form available.",
+      "keywords": "contact, email, phone, message, get in touch"
+    }
   },
   "footer": {
     "information": "Information",
@@ -83,6 +103,10 @@
     "your-lunar-year": "Your lunar year"
   },
   "tools": {
-    "title": "Tools"
+    "title": "Tools",
+    "meta": {
+      "description": "Explore useful tools created by Minh Nguyen including financial management, lunar calculator, and games.",
+      "keywords": "tools, utilities, financial management, lunar calculator, games"
+    }
   }
 }

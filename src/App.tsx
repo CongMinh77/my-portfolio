@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react'
 import i18next from 'i18next'
 import React, { Suspense } from 'react'
 import { I18nextProvider } from 'react-i18next'
+import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './theme/ThemeContext'
 import ScrollProgressBar from './components/ScrollProgressBar'
@@ -15,6 +16,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
 import Routing from './routes/routing'
+import DefaultSEO from './components/SEO/DefaultSEO'
 
 // Resources
 import en from './locales/en.json'
@@ -49,12 +51,14 @@ const App = (): JSX.Element => {
 
   return (
     <React.StrictMode>
-      <MuiThemeProvider theme={MyTheme}>
-        <ThemeProvider>
-          <CssBaseline />
-          <I18nextProvider i18n={i18n}>
-            <BrowserRouter>
+      <HelmetProvider>
+        <MuiThemeProvider theme={MyTheme}>
+          <ThemeProvider>
+            <CssBaseline />
+            <I18nextProvider i18n={i18n}>
+              <BrowserRouter>
               <ErrorBoundary fallback={ErrorBlock}>
+                <DefaultSEO />
                 <Suspense fallback={<LinearProgress />}>
                   <ScrollToTop />
                   <ScrollProgressBar />
@@ -66,10 +70,11 @@ const App = (): JSX.Element => {
                   <Analytics />
                 </Suspense>
               </ErrorBoundary>
-            </BrowserRouter>
-          </I18nextProvider>
-        </ThemeProvider>
-      </MuiThemeProvider>
+              </BrowserRouter>
+            </I18nextProvider>
+          </ThemeProvider>
+        </MuiThemeProvider>
+      </HelmetProvider>
     </React.StrictMode>
   )
 }
