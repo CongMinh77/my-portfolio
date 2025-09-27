@@ -51,7 +51,7 @@ const darkTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          color: '#ffffff'
+          color: '#1e1e1e'
         }
       }
     }

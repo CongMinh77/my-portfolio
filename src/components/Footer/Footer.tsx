@@ -27,8 +27,8 @@ const contact = [
     link: 'congminh.se7en@gmail.com'
   },
   {
-    title: 'Linkedin',
-    link: 'https://www.linkedin.com/in/minh-nguyencong/'
+    title: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/minh-nguyen-cong/'
   }
 ]
 
@@ -43,7 +43,7 @@ const iconSocial = [
   },
   {
     icon: <LinkedIn />,
-    link: 'https://www.linkedin.com/in/minh-nguyencong/'
+    link: 'https://www.linkedin.com/in/minh-nguyen-cong/'
   },
   {
     icon: <YouTube />,
