@@ -22,43 +22,44 @@ const FinancialManagement = () => {
   return (
     <Box p={2}>
       <TextField
+        fullWidth
         label={t('service.your_salary')}
         variant="outlined"
         onChange={(e) => setSalary(Number(e.target.value))}
       />
 
-      <Grid container rowSpacing={2}>
-        <Grid item xs={2}>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 0, sm: 2 }}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('service.necessary')}</Typography>
             <Typography>{numeral(firstPot).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('sevice.savings')}</Typography>
             <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('service.self-development')}</Typography>
             <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('service.investment')}</Typography>
             <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('service.enjoys')}</Typography>
             <Typography>{numeral(pots10Percent).format('0,0[.]00')}</Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={6} md={2}>
           <Box p={2}>
             <Typography>{t('service.gifts')}</Typography>
             <Typography>{numeral(pots5Percent).format('0,0[.]00')}</Typography>

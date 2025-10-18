@@ -28,8 +28,8 @@ const Contact = () => {
         {t('contact.title')}
       </Typography>
       <Grid container>
-        <Grid item xs={6} sx={{ padding: 3 }}>
-          <Box sx={{ display: 'flex', width: '100%' }}>
+        <Grid item xs={12} md={6} sx={{ padding: 3 }}>
+          <Box sx={{ display: 'flex', width: '100%', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 2, md: 0 } }}>
             <Box sx={{ width: '100%' }}>
               <TextField
                 fullWidth
@@ -37,7 +37,7 @@ const Contact = () => {
                 variant="standard"
               />
             </Box>
-            <Box sx={{ marginLeft: 2, width: '100%' }}>
+            <Box sx={{ marginLeft: { xs: 0, md: 2 }, width: '100%' }}>
               <TextField
                 fullWidth
                 label={t('contact.last-name')}
@@ -72,7 +72,7 @@ const Contact = () => {
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
             {t('contact.info')}
           </Typography>

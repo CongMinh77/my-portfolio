@@ -42,7 +42,8 @@ const Home = () => {
             fontWeight="bold"
             textAlign={'center'}
             color={COLORS.WHITE}
-            py={2}>
+            py={2}
+            sx={{ fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }, px: { xs: 2, sm: 4 } }}>
             {t('home.introduction')}
           </Typography>
         </Box>

@@ -79,7 +79,7 @@ const Footer = () => {
           <Grid
             container
             sx={{ paddingBottom: 2, maxWidth: '1440px', mx: 'auto' }}>
-            <Grid item xs={3}>
+            <Grid item md={3} xs={6}>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                 <img
                   src={
@@ -108,7 +108,7 @@ const Footer = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item md={3} xs={6}>
               <Typography
                 variant="h5"
                 fontWeight={'bold'}
@@ -142,7 +142,7 @@ const Footer = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={3}>
+            <Grid item md={3} xs={6}>
               <Typography
                 variant="h5"
                 fontWeight={'bold'}
@@ -176,7 +176,7 @@ const Footer = () => {
               </Box>
             </Grid>
 
-            <Grid item xs={3}>
+            <Grid item md={3} xs={6}>
               <Typography
                 variant="h5"
                 fontWeight={'bold'}

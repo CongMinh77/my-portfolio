@@ -53,9 +53,9 @@ const Service: React.FC<IProps> = (props) => {
         sx={{ textAlign: 'center', fontWeight: 'medium', py: 2 }}>
         {t('service.title')}
       </Typography>
-      <Grid container rowSpacing={2}>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 0, sm: 2 }}>
         {cards.map((card, index) => (
-          <Grid key={`${card.title}-${index}`} item xs={12 / cards.length}>
+          <Grid key={`${card.title}-${index}`} item xs={12} sm={6}>
             <ServiceCard
               title={t(`about.${card.title}`)}
               icon={card.icon}

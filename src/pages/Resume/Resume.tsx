@@ -44,8 +44,8 @@ const Resume = () => {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+        <Grid item xs={12} md={4}>
+          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'end' } }}>
             <img
               src={Images.home.avtNCM}
               alt="avt-bio"
@@ -53,7 +53,7 @@ const Resume = () => {
             />
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12} md={8}>
           <Box>
             <Typography variant="h4">{t('resume.work-experience')}</Typography>
             {career &&
