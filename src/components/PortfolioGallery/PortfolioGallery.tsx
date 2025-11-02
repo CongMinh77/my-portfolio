@@ -1,5 +1,6 @@
 import { Box, Typography, ImageList, ImageListItem } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 /**
  * Portfolio gallery component that displays a masonry layout of images
@@ -8,7 +9,7 @@ import React from 'react'
  * @param {string} props.title - Gallery title
  */
 const PortfolioGallery: React.FC<{
-  images: Array<{ src: string; title: string }>
+  images: Array<{ src: string; title: string; website: string }>
   title: string
 }> = ({ images, title }) => {
   return (
@@ -27,19 +28,25 @@ const PortfolioGallery: React.FC<{
         }}>
         <ImageList variant="masonry" cols={3} gap={8} sx={{ marginY: 0 }}>
           {images.map((item) => (
-            <ImageListItem key={item.src}>
-              <img
-                src={item.src}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderRadius: '16px',
-                  padding: '8px',
-                  width: '100%',
-                  height: 'auto'
-                }}
-              />
-            </ImageListItem>
+            <Link
+              key={item.src}
+              to={item.website}
+              target="_blank"
+              rel="noopener noreferrer">
+              <ImageListItem key={item.src}>
+                <img
+                  src={item.src}
+                  alt={item.title}
+                  loading="lazy"
+                  style={{
+                    borderRadius: '16px',
+                    padding: '8px',
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+              </ImageListItem>
+            </Link>
           ))}
         </ImageList>
       </Box>
