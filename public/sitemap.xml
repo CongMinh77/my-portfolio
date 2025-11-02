@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/</loc>
+    <loc>https://cmse7en.is-a.dev/</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/about</loc>
+    <loc>https://cmse7en.is-a.dev/about</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/contact</loc>
+    <loc>https://cmse7en.is-a.dev/contact</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/login</loc>
+    <loc>https://cmse7en.is-a.dev/login</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/portfolio</loc>
+    <loc>https://cmse7en.is-a.dev/portfolio</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/resume</loc>
+    <loc>https://cmse7en.is-a.dev/resume</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/service</loc>
+    <loc>https://cmse7en.is-a.dev/service</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://cmse7en-portfolio.vercel.app/tools</loc>
+    <loc>https://cmse7en.is-a.dev/tools</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

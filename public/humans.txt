@@ -10,4 +10,4 @@
 	Doctype: HTML5
 	IDE: Visual Studio Code
 	Technologies: React, TypeScript, Material-UI, Tailwind CSS
-	URL: https://cmse7en-portfolio.vercel.app
+	URL: https://cmse7en.is-a.dev

@@ -8,7 +8,7 @@ import WebsiteJsonLd from './WebsiteJsonLd'
  * @returns {JSX.Element} - DefaultSEO component with meta tags
  */
 const DefaultSEO: React.FC = () => {
-  const siteUrl = 'https://cmse7en-portfolio.vercel.app'
+  const siteUrl = 'https://cmse7en.is-a.dev'
 
   return (
     <>

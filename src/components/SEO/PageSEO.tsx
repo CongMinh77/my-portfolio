@@ -22,7 +22,7 @@ const PageSEO: React.FC<PageSEOProps> = ({
   keywords,
   ogImage = '/og-image.svg'
 }) => {
-  const siteUrl = 'https://cmse7en-portfolio.vercel.app'
+  const siteUrl = 'https://cmse7en.is-a.dev'
   const url = `${siteUrl}${path}`
 
   return (
