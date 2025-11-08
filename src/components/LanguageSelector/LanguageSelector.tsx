@@ -12,24 +12,28 @@ const LanguageSelector = () => {
     localStorage.setItem('locale', locale)
   }
   return (
-    <Box style={{ display: 'flex' }}>
-      <Tooltip title={t('language-selector.languages.vi')}>
-        <IconButton onClick={() => handleChangeLocale('vi')}>
+    <Box style={{ display: 'flex' }} gap={1}>
+      <Tooltip title={t('language-selector.languages.vi')} followCursor>
+        <IconButton
+          sx={{ width: 40, height: 40 }}
+          onClick={() => handleChangeLocale('vi')}>
           <SmartImage
             src={ViFlag}
             alt="ViFlag"
             placeholder="Vi"
-            customStyle={{ height: 15, width: 22, borderRadius: 5 }}
+            customStyle={{ height: 16, width: 20, borderRadius: 2 }}
           />
         </IconButton>
       </Tooltip>
-      <Tooltip title={t('language-selector.languages.en')}>
-        <IconButton onClick={() => handleChangeLocale('en')}>
+      <Tooltip title={t('language-selector.languages.en')} followCursor>
+        <IconButton
+          sx={{ width: 40, height: 40 }}
+          onClick={() => handleChangeLocale('en')}>
           <SmartImage
             src={EnFlag}
             alt="EnFlag"
             placeholder="En"
-            customStyle={{ height: 15, width: 22, borderRadius: 5 }}
+            customStyle={{ height: 16, width: 20, borderRadius: 2 }}
           />
         </IconButton>
       </Tooltip>

@@ -11,6 +11,7 @@ import Resume from '@pages/Resume'
 import Service from '@pages/Service'
 import PageSEO from '@/components/SEO/PageSEO'
 import { useStyles } from './styles'
+import { TypeAnimation } from 'react-type-animation'
 
 const Home = () => {
   const classes = useStyles()
@@ -20,11 +21,20 @@ const Home = () => {
   }, [t])
   return (
     <>
-      <PageSEO 
-        title={t('home.title') + " - Minh Nguyen"}
-        description={t('home.meta.description') || "Minh Nguyen's personal portfolio showcasing web development skills, projects, and experience."}
+      <PageSEO
+        title={t('home.title') + ' - Minh Nguyen'}
+        description={
+          t('home.meta.description') ||
+          "Minh Nguyen's personal portfolio showcasing web development skills, projects, and experience."
+        }
         path="/"
-        keywords={['portfolio', 'web developer', 'frontend', 'react', 'typescript']}
+        keywords={[
+          'portfolio',
+          'web developer',
+          'frontend',
+          'react',
+          'typescript'
+        ]}
       />
       <Box sx={{ display: 'flex', position: 'relative' }}>
         <img
@@ -43,8 +53,18 @@ const Home = () => {
             textAlign={'center'}
             color={COLORS.WHITE}
             py={2}
-            sx={{ fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }, px: { xs: 2, sm: 4 } }}>
-            {t('home.introduction')}
+            sx={{
+              fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+              px: { xs: 2, sm: 4 }
+            }}>
+            <TypeAnimation
+              key={t('home.introduction')}
+              sequence={[t('home.introduction'), 1000]}
+              wrapper="span"
+              speed={33}
+              style={{ fontSize: '2em', display: 'inline-block' }}
+              repeat={Infinity}
+            />
           </Typography>
         </Box>
       </Box>
@@ -52,9 +72,7 @@ const Home = () => {
       <Box sx={{ maxWidth: '1440px', margin: '0 auto' }}>
         <Portfolio />
         <About />
-        <Service
-          showFinancial={false}
-        />
+        <Service showFinancial={false} />
         <Resume />
         <Contact />
       </Box>

@@ -3,14 +3,12 @@ import LightModeIcon from '@mui/icons-material/LightMode'
 import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
-  Avatar,
   Box,
   Button,
   Container,
   IconButton,
   Menu,
   MenuItem,
-  Switch,
   Toolbar,
   Typography,
   useTheme as useMuiTheme
@@ -141,22 +139,15 @@ const Header: React.FC<IProps> = (props) => {
 
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mr: 1 }}>
-                {isDarkMode ? (
-                  <DarkModeIcon fontSize="small" />
-                ) : (
-                  <LightModeIcon fontSize="small" />
-                )}
+                <IconButton onClick={toggleTheme}>
+                  {isDarkMode ? (
+                    <DarkModeIcon fontSize="small" />
+                  ) : (
+                    <LightModeIcon fontSize="small" />
+                  )}
+                </IconButton>
               </Box>
-              <Switch
-                checked={isDarkMode}
-                onChange={toggleTheme}
-                name="theme"
-                color="secondary"
-              />
               <LanguageSelector />
-              <IconButton sx={{ p: 0 }}>
-                <Avatar alt="MinhNC" src={Images.home.avtNCM} />
-              </IconButton>
             </Box>
           </Toolbar>
         </Container>
