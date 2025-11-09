@@ -1,6 +1,12 @@
 import { useThemeCustom } from '@/theme'
 import { Images, LINKS } from '@/utils'
-import { Facebook, Instagram, LinkedIn, YouTube } from '@mui/icons-material'
+import {
+  Facebook,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  YouTube
+} from '@mui/icons-material'
 import { Box, Divider, Grid, IconButton, Typography } from '@mui/material'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -48,6 +54,10 @@ const iconSocial = [
   {
     icon: <YouTube />,
     link: 'https://www.youtube.com/channel/UCMMKhIT65LTvmuBCNtj7KPA'
+  },
+  {
+    icon: <GitHub />,
+    link: 'https://github.com/CongMinh77'
   }
 ]
 

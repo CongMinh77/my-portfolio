@@ -8,6 +8,11 @@ const images = [
     src: '/assets/portfolio/prj-steny.png',
     title: 'Prj Steny',
     website: 'https://stenyorganic.com/'
+  },
+  {
+    src: '/assets/portfolio/prj-god-of-decisions.png',
+    title: 'Prj God Of Decisions',
+    website: 'https://god-of-decisions.vercel.app/'
   }
   // {
   //   src: '/assets/portfolio/prj-flip-book.png',

@@ -16,11 +16,22 @@ const Contact = () => {
   }, [t])
   return (
     <>
-      <PageSEO 
-        title={t('contact.title') + " - Minh Nguyen"}
-        description={t('contact.meta.description') || "Get in touch with Minh Nguyen. Contact information and message form available."}
+      <PageSEO
+        title={t('contact.title') + ' - Minh Nguyen'}
+        description={
+          t('contact.meta.description') ||
+          'Get in touch with Minh Nguyen. Contact information and message form available.'
+        }
         path="/contact"
-        keywords={t('contact.meta.keywords')?.split(', ') || ['contact', 'email', 'phone', 'message', 'get in touch']}
+        keywords={
+          t('contact.meta.keywords')?.split(', ') || [
+            'contact',
+            'email',
+            'phone',
+            'message',
+            'get in touch'
+          ]
+        }
       />
       <Typography
         variant="h4"
@@ -29,7 +40,13 @@ const Contact = () => {
       </Typography>
       <Grid container>
         <Grid item xs={12} md={6} sx={{ padding: 3 }}>
-          <Box sx={{ display: 'flex', width: '100%', flexDirection: { xs: 'column', md: 'row' }, gap: { xs: 2, md: 0 } }}>
+          <Box
+            sx={{
+              display: 'flex',
+              width: '100%',
+              flexDirection: { xs: 'column', md: 'row' },
+              gap: { xs: 2, md: 0 }
+            }}>
             <Box sx={{ width: '100%' }}>
               <TextField
                 fullWidth
@@ -80,7 +97,7 @@ const Contact = () => {
           <Box mt={3} sx={{ display: 'flex', alignItems: 'center' }}>
             <PlaceOutlined />
             <Typography ml={2} variant="body1">
-              Lien Hiep, Phuc Tho, Ha Noi
+              {t('contact.address')}
             </Typography>
           </Box>
           <Box

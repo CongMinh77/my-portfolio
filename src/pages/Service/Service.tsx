@@ -1,11 +1,10 @@
+import PageSEO from '@/components/SEO/PageSEO'
+import ServiceCard from '@components/ServiceCard'
 import { CodeRounded, DrawOutlined } from '@mui/icons-material'
 import { Grid, Typography } from '@mui/material'
+import { getPageTitle } from '@utils/index'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import ServiceCard from '@components/ServiceCard'
-import { getPageTitle } from '@utils/index'
-import PageSEO from '@/components/SEO/PageSEO'
-import FinancialManagement from '@pages/FinancialManagement'
 // Removed unused imports
 
 interface ICard {
@@ -30,11 +29,6 @@ const cards: ICard[] = [
 ]
 
 const Service: React.FC<IProps> = (props) => {
-  const {
-    showFinancial = true
-    // Removed unused props
-  } = props
-
   const [t] = useTranslation()
   useEffect(() => {
     document.title = getPageTitle(t('service.title'))
@@ -42,11 +36,21 @@ const Service: React.FC<IProps> = (props) => {
 
   return (
     <div>
-      <PageSEO 
-        title={t('service.title') + " - Minh Nguyen"}
-        description={t('service.meta.description') || "Explore the services offered by Minh Nguyen including web development, design, and financial management solutions."}
+      <PageSEO
+        title={t('service.title') + ' - Minh Nguyen'}
+        description={
+          t('service.meta.description') ||
+          'Explore the services offered by Minh Nguyen including web development, design, and financial management solutions.'
+        }
         path="/service"
-        keywords={t('service.meta.keywords')?.split(', ') || ['services', 'web development', 'design', 'financial management']}
+        keywords={
+          t('service.meta.keywords')?.split(', ') || [
+            'services',
+            'web development',
+            'design',
+            'financial management'
+          ]
+        }
       />
       <Typography
         variant="h4"
@@ -64,13 +68,6 @@ const Service: React.FC<IProps> = (props) => {
           </Grid>
         ))}
       </Grid>
-      {showFinancial && (
-        <Grid container rowSpacing={2}>
-          <Grid item xs={12}>
-            <FinancialManagement />
-          </Grid>
-        </Grid>
-      )}
     </div>
   )
 }
